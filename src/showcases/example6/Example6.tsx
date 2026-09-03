@@ -1,0 +1,10 @@
+import config from './config.json';
+import './example6.css';
+import { BlurText } from '../../components/react-bits/BlurText';
+import { CircularGallery } from '../../components/react-bits/CircularGallery';
+import { ShowcaseProductCard } from '../../components/ShowcaseProductCard';
+import { ShowcaseInfo } from '../../components/ShowcaseInfo';
+import { useTheme } from '../../hooks/useTheme';
+import type { ShowcaseConfig } from '../../types/showcase';
+const data = config as ShowcaseConfig;
+export default function Example6({ navigate }: { navigate: (path: string) => void }) { const { theme } = useTheme(); const t = data.theme[theme]; return <main className="store hubspot-page" style={{ '--bg': t.background, '--surface': t.surface, '--text': t.text, '--muted': t.muted, '--primary': t.primary } as React.CSSProperties}><section className="archive-hero"><header><button className="archive-logo" onClick={() => navigate('/')}>{data.title}</button><button className="archive-contact" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>{data.contactPersonName} ↗</button></header><div><p className="eyebrow">{data.hero.eyebrow}</p><h1><BlurText>{data.headline}</BlurText></h1><p>{data.content}</p><button className="archive-primary" onClick={() => document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' })}>{data.hero.primaryAction} ↗</button></div></section><section className="archive-catalog" id="catalog"><header><div><p className="eyebrow">{data.showcase.category}</p><h2>{data.subtitle}</h2></div><button className="archive-link" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>{data.hero.secondaryAction} ↗</button></header><CircularGallery>{data.products.map((product, index) => <ShowcaseProductCard key={product.number} product={product} index={index} slug={data.slug} navigate={navigate} whatsapp={data.contactPersonWhatsapp} purchaseLabel={data.hero.primaryAction} detailLabel={data.hero.secondaryAction} variant="circular" />)}</CircularGallery></section><ShowcaseInfo config={data} /></main>; }
