@@ -3,9 +3,11 @@ import "./example4.css";
 import { Aurora } from "../../components/react-bits/Aurora";
 import { BlurText } from "../../components/react-bits/BlurText";
 import { TiltedCard } from "../../components/react-bits/TiltedCard";
+
 import { ShowcaseCatalog } from "../../components/ShowcaseCatalog";
 import { ShowcaseInfo } from "../../components/ShowcaseInfo";
 import { useTheme } from "../../hooks/useTheme";
+import { useEffect, useState } from "react";
 import type { ShowcaseConfig } from "../../types/showcase";
 const data = config as ShowcaseConfig;
 export default function Example4({
@@ -14,7 +16,29 @@ export default function Example4({
   navigate: (path: string) => void;
 }) {
   const { theme } = useTheme();
+  const [featuredIndex, setFeaturedIndex] = useState(0);
+  const [direction, setDirection] = useState<1 | -1>(1);
+  const [moving, setMoving] = useState(false);
   const t = data.theme[theme];
+  const featuredProducts = data.products.filter((product) => !product.hide && product.photoUrls[0]);
+  const featuredCount = featuredProducts.length;
+  const group = (start: number) => Array.from({ length: Math.min(3, featuredCount) }, (_, offset) => featuredProducts[(start + offset + featuredCount) % featuredCount]);
+  const currentFeatured = group(featuredIndex);
+  const nextFeatured = group(featuredIndex + direction);
+  const changeFeatured = (step: 1 | -1) => {
+    if (moving || featuredCount < 2) return;
+    setDirection(step);
+    setMoving(true);
+    window.setTimeout(() => {
+      setFeaturedIndex((index) => (index + step + featuredCount) % featuredCount);
+      setMoving(false);
+    }, 680);
+  };
+  useEffect(() => {
+    if (featuredCount < 2) return;
+    const timer = window.setInterval(() => changeFeatured(1), 5000);
+    return () => window.clearInterval(timer);
+  }, [featuredCount, moving]);
   return (
     <main
       className="store uber-page"
@@ -63,17 +87,10 @@ export default function Example4({
               {data.hero.primaryAction} ↗
             </button>
           </div>
-          <TiltedCard>
-            <div className="watch-face">
-              <span>{data.showcase.badge}</span>
-              <div className="watch-hands" aria-hidden="true">
-                <i />
-                <b />
-              </div>
-              <strong>{data.title}</strong>
-              <small>{data.showcase.category}</small>
-            </div>
-          </TiltedCard>
+          <div className="watch-carousel" aria-label="Featured watches">
+            {featuredCount > 0 && <div className={`watch-carousel-viewport ${moving ? `is-moving-${direction === 1 ? "next" : "previous"}` : ""}`}><div className="watch-fan-layer watch-fan-current">{currentFeatured.map((product, position) => <TiltedCard key={product.number}><button className={`watch-display watch-display-position-${position}`} onClick={() => navigate(`/showcase/${data.slug}/product/${product.number}`)} aria-label={`View ${product.name}`}><div className="watch-display-image"><img src={product.photoUrls[0]} alt={product.name} /></div><span className="watch-display-category">{product.category}</span><strong>{product.name}</strong><small>{product.variant}</small></button></TiltedCard>)}</div>{moving && <div className="watch-fan-layer watch-fan-next">{nextFeatured.map((product, position) => <TiltedCard key={product.number}><button className={`watch-display watch-display-position-${position}`} onClick={() => navigate(`/showcase/${data.slug}/product/${product.number}`)} aria-label={`View ${product.name}`}><div className="watch-display-image"><img src={product.photoUrls[0]} alt={product.name} /></div><span className="watch-display-category">{product.category}</span><strong>{product.name}</strong><small>{product.variant}</small></button></TiltedCard>)}</div>}</div>}
+            {featuredProducts.length > 1 && <div className="watch-carousel-controls"><button type="button" onClick={() => changeFeatured(-1)} aria-label="Previous featured watch">←</button><span>{String((featuredIndex % featuredProducts.length) + 1).padStart(2, "0")} / {String(featuredProducts.length).padStart(2, "0")}</span><button type="button" onClick={() => changeFeatured(1)} aria-label="Next featured watch">→</button></div>}
+          </div>
         </div>
       </section>
       <section className="uber-catalog" id="catalog">
