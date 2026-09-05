@@ -1,0 +1,452 @@
+{
+  "slug": "example7",
+  "title": "ARLOJIHOBI",
+  "subtitle": "Curators of Exceptional Timepieces & Fine Horology",
+  "companyAddress": "Jakarta & Bandung, Indonesia",
+  "companyEmail": "contact@arlojihobi.com",
+  "companyPhone": "+62 812 8888 7777",
+  "contactPersonName": "Arlojihobi Concierge",
+  "contactPersonEmail": "curator@arlojihobi.com",
+  "contactPersonPhone": "+62 812 8888 7777",
+  "contactPersonWhatsapp": "6281288887777",
+  "headline": "Vintage, modern, and everything in between.",
+  "content": "For decades, ARLOJIHOBI has been dedicated to the art of fine horology. Over 1,000 authenticated vintage watches.",
+  "image": "https://i.imgur.com/67KIUVt.jpeg",
+  "instagram": "https://instagram.com/arlojihobi",
+  "facebook": "",
+  "twitterX": "",
+  "tokopedia": "",
+  "tiktok": "",
+  "shopee": "",
+  "lazada": "",
+  "others": [
+    "https://arlojihobi.com"
+  ],
+  "owner": {
+    "name": "ARLOJIHOBI",
+    "handle": "@arlojihobi"
+  },
+  "showcase": {
+    "title": "ARLOJIHOBI",
+    "category": "Fine Watches",
+    "description": "Curated vintage & luxury timepieces authenticated for collectors.",
+    "badge": "Heritage"
+  },
+  "hero": {
+    "eyebrow": "Maison d'Horlogerie",
+    "title": "Vintage, modern, and everything in between.",
+    "description": "Curated vintage, modern, and collectible timepieces. Every piece meticulously verified, serviced, and preserved.",
+    "primaryAction": "Explore Collections",
+    "secondaryAction": "Contact Concierge"
+  },
+  "products": [
+    {
+      "number": 1,
+      "category": "Vintage Chronographs",
+      "name": "Vintage Chronograph Watch Edition",
+      "variant": "Manual Wind / Panda Dial",
+      "description": "Arlojihobi signature vintage chronograph dengan dial panda klasik dan movement manual wind presisi.",
+      "price": 32500000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/67KIUVt.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 2,
+      "category": "Vintage Chronographs",
+      "name": "Classic Automatic Steel Sunburst",
+      "variant": "Automatic / Silver Sunburst",
+      "description": "Jam otomatis vintage casing stainless steel dengan dial sunburst yang anggun.",
+      "price": 18900000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/HdJjZRY.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 3,
+      "category": "Vintage Chronographs",
+      "name": "Longines Vintage Automatic White Dial",
+      "variant": "Automatic / White Dial",
+      "description": "Longines vintage elegan dengan dial putih bersih, jarum dauphine, dan movement automatic legendaris.",
+      "price": 24500000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/KUcIad2.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 4,
+      "category": "Vintage Chronographs",
+      "name": "Longines Heritage Roman Numerals",
+      "variant": "Heritage / Roman Dial",
+      "description": "Koleksi Longines heritage dengan index angka Romawi dan proporsi klasik.",
+      "price": 28000000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/XGAQJIK.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 5,
+      "category": "Vintage Chronographs",
+      "name": "Longines Square Cushion Case Gold",
+      "variant": "Gold Plated / Cushion",
+      "description": "Case cushion berlapis emas dengan pesona era 1970-an.",
+      "price": 19500000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/JIU6uCC.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 6,
+      "category": "Vintage Chronographs",
+      "name": "Longines Art Deco Tonneau Case",
+      "variant": "Tonneau / Art Deco",
+      "description": "Desain tonneau khas era Art Deco dengan karakter vintage yang sangat kuat.",
+      "price": 22900000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/lxzvYf6.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 7,
+      "category": "Vintage Chronographs",
+      "name": "Longines Automatic Chronometer Classic",
+      "variant": "Chronometer / Certified",
+      "description": "Chronometer vintage akurasi tinggi dengan finishing dial presisi.",
+      "price": 26500000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/SxlnxuD.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 8,
+      "category": "Vintage Chronographs",
+      "name": "Longines Golden Wing Elegant",
+      "variant": "Dress Watch / Steel & Gold",
+      "description": "Dress watch ramping dua warna untuk tampilan formal harian.",
+      "price": 17500000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/afWwInk.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 9,
+      "category": "Heritage & Dress",
+      "name": "Hamilton Khaki Classic Mechanical",
+      "variant": "Mechanical / Military Heritage",
+      "description": "Ikon militer lapangan dengan kaliber hand-winding yang tangguh.",
+      "price": 16900000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/67KIUVt.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 10,
+      "category": "Heritage & Dress",
+      "name": "Omega De Ville Vintage Automatic",
+      "variant": "Gold Cap / Automatic",
+      "description": "Omega De Ville orisinal dalam kondisi sangat terawat dengan pesona mewah.",
+      "price": 34500000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/IcZmx0N.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 11,
+      "category": "Heritage & Dress",
+      "name": "Hamilton Square Art Deco Gold",
+      "variant": "Art Deco Square",
+      "description": "Case kotak vintage berpadu dial bertekstur unik.",
+      "price": 15500000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/IcZmx0N.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 12,
+      "category": "Heritage & Dress",
+      "name": "Hamilton Cushion Vintage Sub-dial",
+      "variant": "Small Seconds / Cushion",
+      "description": "Sub-dial detik terpisah pada pukul 6 dengan case cushion retro.",
+      "price": 18000000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/GWhYalh.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 13,
+      "category": "Heritage & Dress",
+      "name": "Omega Geneve Automatic Blue Sunburst",
+      "variant": "Blue Sunburst Dial",
+      "description": "Dial biru sunburst langka yang menangkap cahaya dengan memukau.",
+      "price": 29000000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/qygnjCt.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 14,
+      "category": "Heritage & Dress",
+      "name": "Omega Seamaster Cosmic Vintage",
+      "variant": "Monobloc Case",
+      "description": "Seamaster era 1960-an dengan konstruksi monocoque case yang ikonik.",
+      "price": 33000000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/LQmBwpM.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 15,
+      "category": "Heritage & Dress",
+      "name": "Omega Chronometer Day-Date Vintage",
+      "variant": "Day-Date / Cal. 1020",
+      "description": "Fitur hari dan tanggal lengkap dengan akurasi chronometer.",
+      "price": 38500000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/acZ6MYJ.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 16,
+      "category": "Modern Divers & Sports",
+      "name": "Retro Diver 200m Automatic Black",
+      "variant": "200m Diver / Bezel Hitam",
+      "description": "Diver klasik tahan air dengan lume terang dan bezel putar mantap.",
+      "price": 25000000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/2gNjqef.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 17,
+      "category": "Modern Divers & Sports",
+      "name": "Seiko Prospex Diver Special Edition",
+      "variant": "Prospex Automatic",
+      "description": "Jam penyelam profesional dengan ketahanan tinggi dan desain berkarakter.",
+      "price": 19800000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/lbJWrF2.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 18,
+      "category": "Modern Divers & Sports",
+      "name": "Vintage Chrono Panda Watch Dial",
+      "variant": "Dual Register Panda",
+      "description": "Chronograph dua subdial kontras hitam-putih untuk pencinta racing.",
+      "price": 45000000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/2twolRd.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 19,
+      "category": "Modern Divers & Sports",
+      "name": "Military Field Olive Drab Strap",
+      "variant": "Field Watch / Olive Nylon",
+      "description": "Sederhana, terbaca jelas, dan siap untuk petualangan.",
+      "price": 14200000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/pbGLsAH.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 20,
+      "category": "Modern Divers & Sports",
+      "name": "Monaco Square Chronograph Tribute",
+      "variant": "Square Chronograph",
+      "description": "Tribut jam balap legendaris berbentuk kotak dengan mahkota kiri.",
+      "price": 52000000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/eq3YEiU.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 21,
+      "category": "Collector Curated",
+      "name": "Bullhead Vintage Watch Chronograph",
+      "variant": "Bullhead Pushers",
+      "description": "Pusher di bagian atas case menyerupai kepala banteng, incaran para kolektor.",
+      "price": 49000000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/HdJjZRY.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 22,
+      "category": "Collector Curated",
+      "name": "Rare Cushion Chrono Steel Case",
+      "variant": "Chrono Cushion Case",
+      "description": "Proporsi tebal dan maskulin dengan dial tiga register.",
+      "price": 41500000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/2aB15zG.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 23,
+      "category": "Collector Curated",
+      "name": "Omega Speedmaster Reduced Automatic",
+      "variant": "Speedmaster Reduced 39mm",
+      "description": "Moonwatch versi otomatis yang pas di pergelangan tangan Asia.",
+      "price": 58000000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/z2Ud7Vd.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 24,
+      "category": "Collector Curated",
+      "name": "Heuer Autavia Vintage Re-Issue",
+      "variant": "Autavia Chronograph",
+      "description": "Warisan balap otomotif dengan nilai sejarah dan kolektibilitas tinggi.",
+      "price": 64000000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/F7P90xL.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 25,
+      "category": "Accessories & Straps",
+      "name": "Handmade Vintage Calfskin Leather",
+      "variant": "Brown Calfskin / 20mm",
+      "description": "Kulit sapi asli buatan tangan dengan jahitan minimalis tepi.",
+      "price": 1200000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/grD2fvC.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 26,
+      "category": "Accessories & Straps",
+      "name": "Perforated Watch Rally Strap",
+      "variant": "Racing Rally / 20mm",
+      "description": "Lubang perforasi racing klasik berbahan kulit premium lembut.",
+      "price": 1450000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/94ejUgc.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 27,
+      "category": "Accessories & Straps",
+      "name": "Italian Suede Stitching Strap Tan",
+      "variant": "Tan Suede / 18mm & 20mm",
+      "description": "Suede Italia bertekstur halus untuk sentuhan kasual berkelas.",
+      "price": 1350000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/CJRksC9.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 28,
+      "category": "Accessories & Straps",
+      "name": "Vintage Beads of Rice Steel Bracelet",
+      "variant": "Stainless Steel Beads of Rice",
+      "description": "Rantai jam bergaya retro yang sangat lentur dan nyaman dipakai.",
+      "price": 2800000,
+      "unit": "pcs",
+      "photoUrls": [
+        "https://i.imgur.com/hsWgBp8.jpeg"
+      ],
+      "stockOut": false,
+      "hide": false
+    }
+  ],
+  "theme": {
+    "light": {
+      "background": "#ffffff",
+      "surface": "#f8f9fa",
+      "text": "#000000",
+      "muted": "#666666",
+      "primary": "#c0392b"
+    },
+    "dark": {
+      "background": "#0d0e12",
+      "surface": "#171920",
+      "text": "#ffffff",
+      "muted": "#9ca3af",
+      "primary": "#e74c3c"
+    }
+  }
+}

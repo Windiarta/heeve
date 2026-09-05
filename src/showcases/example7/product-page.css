@@ -1,0 +1,133 @@
+.store-example7-product {
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  font-family: "DM Sans", system-ui, sans-serif;
+}
+
+.ex7-pdp-nav {
+  height: 56px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.ex7-back-btn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+
+.ex7-pdp-layout {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 768px) {
+  .ex7-pdp-layout {
+    grid-template-columns: 1fr;
+    margin: 20px auto;
+  }
+}
+
+.ex7-pdp-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ex7-pdp-main-img {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f8f8f8;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.ex7-pdp-main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ex7-pdp-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ex7-pdp-category {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #c0392b;
+  margin-bottom: 8px;
+}
+
+.ex7-pdp-title {
+  font-family: inherit;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.ex7-pdp-variant {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.ex7-pdp-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.ex7-pdp-desc {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.ex7-pdp-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.ex7-buy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 16px 32px;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.ex7-buy-btn:hover {
+  background: #333;
+}

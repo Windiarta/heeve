@@ -3,8 +3,8 @@ import { showcaseRegistry } from '../src/showcases/registry';
 
 test('showcase configs expose optional business fields and valid products', () => {
   const entries = Object.values(showcaseRegistry);
-  expect(entries).toHaveLength(6);
-  expect(new Set(entries.map(({ config }) => config.slug)).size).toBe(6);
+  expect(entries).toHaveLength(7);
+  expect(new Set(entries.map(({ config }) => config.slug)).size).toBe(7);
   for (const { config } of entries) {
     expect(config.products.length).toBeGreaterThan(0);
     expect(config.title).toBeTruthy();

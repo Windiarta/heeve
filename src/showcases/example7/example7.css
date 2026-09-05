@@ -1,0 +1,478 @@
+.store-example7 {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: #111;
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+.store-example7 * {
+  box-sizing: border-box;
+}
+
+/* Header */
+.ex7-header {
+  height: 58px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.ex7-header-left, .ex7-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ex7-icon-btn {
+  background: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  padding: 6px 8px;
+}
+
+.ex7-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+}
+
+.ex7-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.ex7-brand-text {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #000;
+}
+
+/* Hero Carousel */
+.ex7-hero {
+  position: relative;
+  height: 680px;
+  background: #000;
+  overflow: hidden;
+  color: #fff;
+}
+
+.ex7-hero-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.ex7-hero-slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+}
+
+.ex7-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ex7-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+}
+
+.ex7-hero-content {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.ex7-hero-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ex7-hero-title {
+  font-family: inherit;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 6px 0 16px;
+  letter-spacing: 1px;
+}
+
+.ex7-hero-cta {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  padding-bottom: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ex7-hero-controls {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  z-index: 3;
+}
+
+.ex7-dot {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  transition: all 0.3s;
+}
+
+.ex7-dot.active {
+  width: 24px;
+  background: #fff;
+}
+
+.ex7-dot:not(.active) {
+  width: 8px;
+}
+
+/* Section Title / Paragraph */
+.ex7-title-section {
+  text-align: center;
+  padding: 64px 24px 32px;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.ex7-title-section.dark {
+  background: #0d0e12;
+  color: #fff;
+  max-width: 100%;
+}
+
+.ex7-subheading {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.ex7-heading {
+  font-family: inherit;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.ex7-paragraph {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.ex7-title-section.dark .ex7-paragraph {
+  color: #aaa;
+}
+
+/* Carousel Section */
+.ex7-product-section {
+  padding: 32px 0 64px;
+  background: #fafafa;
+}
+
+.ex7-tab-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0 16px;
+  margin-bottom: 32px;
+}
+
+.ex7-tab-btn {
+  background: #eee;
+  border: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  color: #333;
+}
+
+.ex7-tab-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+.ex7-product-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 0 32px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+.ex7-product-card {
+  min-width: 300px;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 1px solid #eaeaea;
+  padding-bottom: 20px;
+}
+
+.ex7-product-img-wrap {
+  width: 100%;
+  height: 300px;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+.ex7-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.ex7-product-card:hover .ex7-product-img {
+  transform: scale(1.04);
+}
+
+.ex7-card-badge {
+  color: #c0392b;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 14px;
+}
+
+.ex7-card-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 6px 12px 2px;
+  color: #111;
+}
+
+.ex7-card-variant {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.ex7-card-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Grid Sections */
+.ex7-grid-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.ex7-collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.ex7-collection-card {
+  position: relative;
+  height: 380px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ex7-collection-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.ex7-collection-card:hover img {
+  transform: scale(1.05);
+}
+
+.ex7-collection-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  color: #fff;
+}
+
+.ex7-col-sub {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ex7-col-title {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* Full Width Media */
+.ex7-media-banner {
+  position: relative;
+  height: 520px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ex7-media-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ex7-media-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 24px;
+}
+
+/* Quote Section */
+.ex7-quote-section {
+  text-align: center;
+  padding: 72px 24px;
+  background: #fff;
+}
+
+.ex7-quote-text {
+  font-family: inherit;
+  font-style: italic;
+  font-size: 24px;
+  max-width: 680px;
+  margin: 0 auto 16px;
+  line-height: 1.4;
+  color: #222;
+}
+
+.ex7-quote-author {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+/* Footer */
+.ex7-footer {
+  background: #0d0e12;
+  color: #aaa;
+  padding: 64px 24px 32px;
+  border-top: 1px solid #222;
+}
+
+.ex7-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.ex7-footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.ex7-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ex7-footer-col li {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.ex7-footer-col a {
+  color: #888;
+  text-decoration: none;
+}
+
+.ex7-footer-col a:hover {
+  color: #fff;
+}
+
+.ex7-footer-bottom {
+  max-width: 1200px;
+  margin: 48px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid #222;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
