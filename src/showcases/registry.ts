@@ -1,10 +1,16 @@
 import type { ComponentType } from "react";
 import Example1 from "./example1/Example1";
+import Example1ProductPage from "./example1/ProductPage";
 import Example2 from "./example2/Example2";
+import Example2ProductPage from "./example2/ProductPage";
 import Example3 from "./example3/Example3";
+import Example3ProductPage from "./example3/ProductPage";
 import Example4 from "./example4/Example4";
+import Example4ProductPage from "./example4/ProductPage";
 import Example5 from "./example5/Example5";
+import Example5ProductPage from "./example5/ProductPage";
 import Example6 from "./example6/Example6";
+import Example6ProductPage from "./example6/ProductPage";
 import example1 from "./example1/config.json";
 import example2 from "./example2/config.json";
 import example3 from "./example3/config.json";
@@ -16,12 +22,20 @@ import type { ShowcaseConfig } from "../types/showcase";
 export type ShowcaseProps = { navigate: (path: string) => void };
 export const showcaseRegistry: Record<
   string,
-  { config: ShowcaseConfig; component: ComponentType<ShowcaseProps> }
+  {
+    config: ShowcaseConfig;
+    component: ComponentType<ShowcaseProps>;
+    productComponent: ComponentType<{
+      config: ShowcaseConfig;
+      product: ShowcaseConfig["products"][number];
+      navigate: (path: string) => void;
+    }>;
+  }
 > = {
-  example1: { config: example1, component: Example1 },
-  example2: { config: example2, component: Example2 },
-  example3: { config: example3, component: Example3 },
-  example4: { config: example4, component: Example4 },
-  example5: { config: example5, component: Example5 },
-  example6: { config: example6, component: Example6 },
+  example1: { config: example1, component: Example1, productComponent: Example1ProductPage },
+  example2: { config: example2, component: Example2, productComponent: Example2ProductPage },
+  example3: { config: example3, component: Example3, productComponent: Example3ProductPage },
+  example4: { config: example4, component: Example4, productComponent: Example4ProductPage },
+  example5: { config: example5, component: Example5, productComponent: Example5ProductPage },
+  example6: { config: example6, component: Example6, productComponent: Example6ProductPage },
 };

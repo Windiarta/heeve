@@ -1,7 +1,7 @@
 import { AppHeader } from "./components/AppHeader";
 import { GalleryPage } from "./pages/GalleryPage";
 import { AboutPage } from "./pages/AboutPage";
-import { ProductPage } from "./pages/ProductPage";
+
 import { useRoute } from "./hooks/useRoute";
 import { showcaseRegistry } from "./showcases/registry";
 import "./app.css";
@@ -23,7 +23,7 @@ export default function App() {
       {path === "/about" ? (
         <AboutPage navigate={navigate} />
       ) : product && entry ? (
-        <ProductPage
+        <entry.productComponent
           config={entry.config}
           product={product}
           navigate={navigate}
