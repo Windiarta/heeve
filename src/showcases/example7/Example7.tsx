@@ -3,8 +3,8 @@ import config from "./config.json";
 import "./example7.css";
 import {
   BurgerIcon,
-  SearchIcon,
-  PinIcon,
+  CompassIcon,
+  WhatsAppIcon,
   BagIcon,
   ArrowBoldLeftIcon,
   ArrowBoldRightIcon,
@@ -95,10 +95,10 @@ export default function Example7({
                 .getElementById("ex7-catalog")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            title="Search"
+            title="Explore"
           >
-            <SearchIcon />
-            <span>Search</span>
+            <CompassIcon />
+            <span>Explore</span>
           </button>
         </div>
 
@@ -127,8 +127,9 @@ export default function Example7({
                 );
               }
             }}
+            title="WhatsApp Contact"
           >
-            <PinIcon />
+            <WhatsAppIcon />
             <span>Contact</span>
           </button>
           <button
