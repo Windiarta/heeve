@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { Aurora } from "../components/react-bits/Aurora";
 import { BlurText } from "../components/react-bits/BlurText";
 import { AnimatedContent } from "../components/react-bits/AnimatedContent";
@@ -11,89 +12,143 @@ export function GalleryPage({
 }: {
   navigate: (path: string) => void;
 }) {
+  const [category, setCategory] = useState("All");
+  const entries = Object.entries(showcaseRegistry);
+  const categories = useMemo(
+    () => ["All", ...new Set(entries.map(([, entry]) => entry.config.showcase.category))],
+    [entries],
+  );
+  const visibleEntries = category === "All"
+    ? entries
+    : entries.filter(([, entry]) => entry.config.showcase.category === category);
+  const productCount = entries.reduce(
+    (total, [, entry]) => total + entry.config.products.filter((product) => !product.hide).length,
+    0,
+  );
+
   return (
-    <main>
-      <section className="hero">
+    <main className="home-page">
+      <section className="hero home-hero">
         <Aurora />
-        <div className="hero-copy">
-          <p className="eyebrow">heeve · storefront inspiration</p>
+        <div className="hero-copy home-hero-copy">
+          <p className="eyebrow">HEEVE / storefront gallery</p>
           <h1>
-            <BlurText>Your next storefront starts here.</BlurText>
+            <BlurText>Make your shop impossible to scroll past.</BlurText>
           </h1>
           <p>
-            Explore six ready-to-adapt storefront directions for products,
-            collections, and independent brands.
+            Enam storefront siap jelajah. Enam arah visual berbeda untuk membantu
+            brand menemukan cara terbaik bercerita dan menjual.
           </p>
-          <button
-            className="primary-button"
-            onClick={() =>
-              document
-                .getElementById("showcases")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Explore the collection
-          </button>
+          <div className="home-hero-actions">
+            <button
+              className="primary-button"
+              onClick={() => document.getElementById("showcases")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Jelajahi showcase <span>↓</span>
+            </button>
+            <button className="hero-link" onClick={() => navigate("/about")}>
+              Tentang heeve <span>↗</span>
+            </button>
+          </div>
+          <div className="home-metrics" aria-label="Gallery statistics">
+            <div><strong>{entries.length}</strong><span>directions</span></div>
+            <div><strong>{productCount}+</strong><span>products</span></div>
+            <div><strong>01</strong><span>starting point</span></div>
+          </div>
         </div>
-        <div className="hero-orbit">
-          ✦<span>03</span>
-          <small>
-            curated
-            <br />
-            experiences
-          </small>
+        <div className="hero-orbit home-orbit" aria-hidden="true">
+          <span>scroll to explore</span>
+          <b>✦</b>
+          <small>made for<br />first impressions</small>
         </div>
       </section>
-      <section className="gallery-section" id="showcases">
-        <div className="section-heading">
+
+      <section className="gallery-section home-gallery" id="showcases">
+        <div className="section-heading home-section-heading">
           <div>
-            <p className="eyebrow">Built for better first impressions</p>
-            <h2>Find the look your brand deserves.</h2>
+            <p className="eyebrow">Curated storefront systems</p>
+            <h2>Pick a point<br />of view.</h2>
           </div>
-          <p>
-            Compare distinct visual systems, discover a direction, then shape it
-            around your own products and story.
-          </p>
+          <p>Setiap showcase adalah template yang bisa kamu isi dengan produk, cerita, dan karakter brand sendiri.</p>
+        </div>
+        <div className="home-filter" role="tablist" aria-label="Filter showcase">
+          {categories.map((item) => (
+            <button
+              key={item}
+              className={category === item ? "active" : ""}
+              onClick={() => setCategory(item)}
+              role="tab"
+              aria-selected={category === item}
+            >
+              {item}
+            </button>
+          ))}
         </div>
         <ChromaGrid>
-          {Object.entries(showcaseRegistry).map(([slug, { config }]) => (
+          {visibleEntries.map(([slug, { config }], index) => (
             <ShowcaseTile
               key={slug}
               config={config}
+              index={index}
               onOpen={() => navigate(`/showcase/${slug}`)}
             />
           ))}
         </ChromaGrid>
+        <div className="home-bottom-note">
+          <span>HEEVE / 2026</span>
+          <span>{visibleEntries.length} showcase ditampilkan</span>
+        </div>
       </section>
     </main>
   );
 }
+
 function ShowcaseTile({
   config,
+  index,
   onOpen,
 }: {
   config: ShowcaseConfig;
+  index: number;
   onOpen: () => void;
 }) {
+  const image = config.image;
   return (
     <AnimatedContent>
-      <SpotlightCard className={`preview-card preview-${config.slug}`}>
-        <div className={`preview-art ${config.image ? "has-image" : ""}`}>
-          {config.image && <img src={config.image} alt="" />}
+      <SpotlightCard
+        className={`preview-card preview-${config.slug}`}
+        onClick={onOpen}
+        onKeyDown={(event) => {
+          if (event.target !== event.currentTarget) return;
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            onOpen();
+          }
+        }}
+        role="link"
+        tabIndex={0}
+      >
+        <button
+          className="preview-open"
+          onClick={(event) => {
+            event.stopPropagation();
+            onOpen();
+          }}
+          aria-label={`Buka ${config.showcase.title}`}
+        >
+          <span>0{index + 1}</span><b>↗</b>
+        </button>
+        <div className={`preview-art ${image ? "has-image" : ""}`}>
+          {image && <img src={image} alt="" />}
           <span>{config.showcase.badge}</span>
           <strong>{config.showcase.title}</strong>
           <i />
         </div>
         <div className="preview-content">
-          <p className="eyebrow">{config.showcase.category}</p>
-          <h3>{config.hero.title}</h3>
-          <p>{config.showcase.description}</p>
-          <button className="text-button" onClick={onOpen}>
-            Open showcase ↗
-          </button>
-          <small>
-            {config.owner.name} · {config.owner.handle}
-          </small>
+          <div className="preview-meta"><p className="eyebrow">{config.showcase.category}</p><span>{config.products.filter((product) => !product.hide).length} items</span></div>
+          <h3>{config.hero.title || config.title || config.showcase.title}</h3>
+          <p>{config.subtitle || config.showcase.description}</p>
+          <small>{config.owner.name} · {config.owner.handle}</small>
         </div>
       </SpotlightCard>
     </AnimatedContent>
