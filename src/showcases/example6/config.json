@@ -1,1 +1,130 @@
-{"slug":"example6","title":"The Archive Room","subtitle":"Koleksi antik untuk ruang yang penuh makna.","companyAddress":"Jl. Koleksi No. 6, Bandung","companyEmail":"hello@archiveroom.example","companyPhone":"+62 22 555 0606","contactPersonName":"Bima Archive","contactPersonEmail":"bima@archiveroom.example","contactPersonPhone":"+62 816 6000 7000","contactPersonWhatsapp":"6281660007000","headline":"Every object holds a chapter.","content":"Koleksi artefak, furnitur, dan benda dekoratif dengan sejarah yang dapat dirasakan.","image":"","instagram":"https://instagram.com/archiveroom","facebook":"","twitterX":"https://x.com/archiveroom","tokopedia":"","tiktok":"","shopee":"","lazada":"","others":["https://archiveroom.example"],"owner":{"name":"Bima Archive","handle":"@archiveroom"},"showcase":{"title":"The Archive Room","category":"Antique collection","description":"Benda-benda bersejarah untuk rumah dan koleksi pribadi.","badge":"Private selection"},"hero":{"eyebrow":"A living archive of objects","title":"Every object holds a chapter.","description":"Koleksi artefak, furnitur, dan benda dekoratif dengan sejarah yang dapat dirasakan.","primaryAction":"Enter the archive","secondaryAction":"Browse objects"},"products":[{"number":1,"category":"Decor","name":"Brass Desk Lamp","variant":"Brass / 1950s","description":"Lampu meja kuningan dengan bentuk fungsional dan cahaya hangat.","price":1250000,"unit":"pcs","photoUrls":[],"stockOut":false,"hide":false},{"number":2,"category":"Furniture","name":"Carved Java Chair","variant":"Teak / early 20th century","description":"Kursi jati ukir dengan proporsi klasik dan jejak usia yang indah.","price":4750000,"unit":"pcs","photoUrls":[],"stockOut":false,"hide":false},{"number":3,"category":"Objects","name":"Travel Trunk","variant":"Leather / restored","description":"Koper kulit vintage yang dipulihkan untuk penyimpanan dan display.","price":1950000,"unit":"pcs","photoUrls":[],"stockOut":false,"hide":false}],"theme":{"light":{"background":"#fcfcfa","surface":"#ffffff","text":"#1f1f1f","muted":"#6c7170","primary":"#ff4800"},"dark":{"background":"#172527","surface":"#213437","text":"#fffaf2","muted":"#b9cdbf","primary":"#ff7650"}}}
+{
+  "slug": "example6",
+  "title": "The Archive Room",
+  "subtitle": "Koleksi antik untuk ruang yang penuh makna.",
+  "companyAddress": "Jl. Koleksi No. 6, Bandung",
+  "companyEmail": "hello@archiveroom.example",
+  "companyPhone": "+62 22 555 0606",
+  "contactPersonName": "The Archive Room",
+  "contactPersonEmail": "bima@archiveroom.example",
+  "contactPersonPhone": "+62 816 6000 7000",
+  "contactPersonWhatsapp": "6281660007000",
+  "headline": "Every object holds a chapter.",
+  "content": "Koleksi artefak, furnitur, dan benda dekoratif dengan sejarah yang dapat dirasakan.",
+  "image": "https://images.bisnis.com/posts/2018/05/06/792019/vespa.jpeg",
+  "instagram": "https://instagram.com/archiveroom",
+  "facebook": "",
+  "twitterX": "https://x.com/archiveroom",
+  "tokopedia": "",
+  "tiktok": "",
+  "shopee": "",
+  "lazada": "",
+  "others": ["https://archiveroom.example"],
+  "owner": {
+    "name": "The Archive Room",
+    "handle": "@archiveroom"
+  },
+  "showcase": {
+    "title": "The Archive Room",
+    "category": "Antique collection",
+    "description": "Benda-benda bersejarah untuk rumah dan koleksi pribadi.",
+    "badge": ""
+  },
+  "hero": {
+    "eyebrow": "A living archive of objects",
+    "title": "Every object holds a chapter.",
+    "description": "Koleksi artefak, furnitur, dan benda dekoratif dengan sejarah yang dapat dirasakan.",
+    "primaryAction": "Enter the archive",
+    "secondaryAction": "Browse objects"
+  },
+  "products": [
+    {
+      "number": 1,
+      "category": "Decor",
+      "name": "Brass Desk Lamp",
+      "variant": "Brass / 1950s",
+      "description": "Lampu meja kuningan dengan bentuk fungsional dan cahaya hangat.",
+      "price": 1250000,
+      "unit": "pcs",
+      "photoUrls": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1FW-KPKBAL3vmApSLstYYNdpaBW1k9rk9c7Sr8UIGlg&s=10"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 2,
+      "category": "Furniture",
+      "name": "Carved Java Chair",
+      "variant": "Teak / early 20th century",
+      "description": "Kursi jati ukir dengan proporsi klasik dan jejak usia yang indah.",
+      "price": 4750000,
+      "unit": "pcs",
+      "photoUrls": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbZ_qtAXbSJm4wKJ4iiMbvMSg4oAuebT-SMooPNk7R3g&s=10"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 3,
+      "category": "Decor",
+      "name": "Chinese Antique Vase",
+      "variant": "Porcelain / vintage",
+      "description": "Vas porselen antik dengan detail dekoratif yang memperkaya ruang.",
+      "price": 2950000,
+      "unit": "pcs",
+      "photoUrls": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPh9G87ggY4aEXo1_vA-63c1R5i1SvMpvD4AEa2yX-Bg&s=10"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 4,
+      "category": "Vehicles",
+      "name": "Classic VW Van",
+      "variant": "Volkswagen / classic",
+      "description": "Volkswagen klasik dengan siluet ikonik dan karakter perjalanan lintas zaman.",
+      "price": 850000000,
+      "unit": "unit",
+      "photoUrls": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXU2GM6LiyAl14ihOjLtHmc6-blBXhrcEcqQ9B7tr_aQViSca3iKmoWhk&s=10"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 5,
+      "category": "Vehicles",
+      "name": "Vespa",
+      "variant": "Classic / restored",
+      "description": "Vespa klasik yang dipulihkan dengan pesona Italia dan detail orisinal.",
+      "price": 65000000,
+      "unit": "unit",
+      "photoUrls": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc-M0D6mExC7TyP5_4C_yLelAHpoB4gT1yhL0F_YJtT1FXtbAKsEv8Tjg&s=10"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 6,
+      "category": "Vehicles",
+      "name": "Vintage Bike",
+      "variant": "Steel frame / restored",
+      "description": "Sepeda vintage dengan rangka baja dan pesona utilitarian yang tak lekang waktu.",
+      "price": 18500000,
+      "unit": "unit",
+      "photoUrls": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKFkFirY3-b3iLcMLRWNIWRvptIHTu079ML-O-AedduO2drVCrAFzTLM&s=10"],
+      "stockOut": false,
+      "hide": false
+    }
+  ],
+  "theme": {
+    "light": {
+      "background": "#fcfcfa",
+      "surface": "#ffffff",
+      "text": "#1f1f1f",
+      "muted": "#6c7170",
+      "primary": "#ff4800"
+    },
+    "dark": {
+      "background": "#172527",
+      "surface": "#213437",
+      "text": "#fffaf2",
+      "muted": "#b9cdbf",
+      "primary": "#ff7650"
+    }
+  }
+}

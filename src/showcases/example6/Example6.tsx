@@ -1,8 +1,7 @@
 import config from "./config.json";
 import "./example6.css";
 import { BlurText } from "../../components/react-bits/BlurText";
-import { CircularGallery } from "../../components/react-bits/CircularGallery";
-import { ShowcaseProductCard } from "../../components/ShowcaseProductCard";
+import { ShowcaseCatalog } from "../../components/ShowcaseCatalog";
 import { ShowcaseInfo } from "../../components/ShowcaseInfo";
 import { useTheme } from "../../hooks/useTheme";
 import type { ShowcaseConfig } from "../../types/showcase";
@@ -43,7 +42,12 @@ export default function Example6({
             {data.contactPersonName} ↗
           </button>
         </header>
-        <div>
+        {data.image && (
+          <div className="archive-hero-visual" aria-hidden="true">
+            <img src={data.image} alt="" />
+          </div>
+        )}
+        <div className="archive-hero-copy">
           <p className="eyebrow">{data.hero.eyebrow}</p>
           <h1>
             <BlurText>{data.headline}</BlurText>
@@ -78,21 +82,15 @@ export default function Example6({
             {data.hero.secondaryAction} ↗
           </button>
         </header>
-        <CircularGallery>
-          {data.products.map((product, index) => (
-            <ShowcaseProductCard
-              key={product.number}
-              product={product}
-              index={index}
-              slug={data.slug}
-              navigate={navigate}
-              whatsapp={data.contactPersonWhatsapp}
-              purchaseLabel={data.hero.primaryAction}
-              detailLabel={data.hero.secondaryAction}
-              variant="circular"
-            />
-          ))}
-        </CircularGallery>
+        <ShowcaseCatalog
+          products={data.products}
+          slug={data.slug}
+          navigate={navigate}
+          whatsapp={data.contactPersonWhatsapp}
+          purchaseLabel={data.hero.primaryAction}
+          detailLabel={data.hero.secondaryAction}
+          variant="circular"
+        />
       </section>
       <ShowcaseInfo config={data} />
     </main>

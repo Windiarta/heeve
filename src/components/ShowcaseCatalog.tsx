@@ -31,7 +31,7 @@ export function ShowcaseCatalog({
   return (
     <div className={`showcase-catalog catalog-${variant}`}>
       <div className="catalog-toolbar">
-        <span className="catalog-count">{filtered.length}</span>
+        <span className="catalog-count">{filtered.length} Products</span>
         <div className="category-filter">
           <button
             className={!category ? "active" : ""}

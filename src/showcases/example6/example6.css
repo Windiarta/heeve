@@ -5,6 +5,7 @@
   min-height: 100vh;
 }
 .archive-hero {
+  position: relative;
   min-height: 620px;
   padding: 0 clamp(24px, 7vw, 96px);
   background: linear-gradient(
@@ -14,6 +15,8 @@
   );
 }
 .archive-hero header {
+  position: relative;
+  z-index: 2;
   height: 72px;
   display: flex;
   align-items: center;
@@ -31,11 +34,35 @@
   font-weight: 700;
   font-size: 21px;
 }
-.archive-hero > div {
+.archive-hero-copy {
+  position: relative;
+  z-index: 1;
   max-width: 900px;
   padding: 130px 0;
 }
-.archive-hero > div:after {
+.archive-hero-visual {
+  position: absolute;
+  inset: 0 0 0 10%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: var(--bg);
+}
+.archive-hero-visual img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+  opacity: 0.78;
+  filter: saturate(0.82);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 34%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 34%, #000 100%);
+}
+.archive-hero-copy:after {
   content: "";
   display: block;
   width: 120px;
@@ -49,7 +76,7 @@
   line-height: 1.02;
   letter-spacing: -0.04em;
 }
-.archive-hero p:not(.eyebrow) {
+.archive-hero-copy p:not(.eyebrow) {
   max-width: 600px;
   color: var(--muted);
   font-size: 18px;
@@ -88,13 +115,13 @@
   color: var(--primary);
   text-decoration: underline;
 }
-.circular-gallery {
+.showcase-catalog-grid.circular {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
   align-items: start;
 }
-.circular-gallery .showcase-product {
+.showcase-catalog-grid.circular .showcase-product {
   background: var(--surface);
   border: 0;
   border-radius: 16px;
@@ -102,27 +129,25 @@
   padding: 12px;
   min-width: 0;
 }
-.circular-gallery .showcase-product-art {
+.showcase-catalog-grid.circular .showcase-product-art {
   aspect-ratio: 1.15;
   height: auto;
   min-height: 190px;
 }
-.circular-gallery .showcase-product:nth-child(2) {
-  margin-top: 48px;
-}
-.circular-gallery .showcase-product-art {
+
+.showcase-catalog-grid.circular .showcase-product-art {
   border-radius: 16px;
 }
-.circular-gallery .whatsapp-cta {
+.showcase-catalog-grid.circular .whatsapp-cta {
   background: var(--primary);
   color: #fff;
 }
-.circular-gallery .product-detail-link {
+.showcase-catalog-grid.circular .product-detail-link {
   border-radius: 8px;
   border-color: var(--primary);
   color: var(--primary);
 }
-.circular-gallery .product-detail-link:hover {
+.showcase-catalog-grid.circular .product-detail-link:hover {
   background: var(--primary);
   color: #fff;
 }
@@ -131,7 +156,21 @@
     padding: 0 16px;
     min-height: 600px;
   }
-  .archive-hero > div {
+  .archive-hero-visual {
+    inset: 18% 0 0 0;
+  }
+  .archive-hero-visual img {
+    top: auto;
+    bottom: 0;
+    height: 82%;
+    max-width: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 34%, #000 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 34%, #000 100%);
+  }
+
+  .archive-hero-copy {
     padding: 92px 8px;
   }
   .archive-hero h1 {
@@ -146,10 +185,123 @@
   .archive-link {
     margin-top: 16px;
   }
-  .circular-gallery {
+  .showcase-catalog-grid.circular {
     grid-template-columns: 1fr;
   }
-  .circular-gallery .showcase-product:nth-child(2) {
-    margin-top: 0;
+}
+
+/* Example 6 keeps every object card readable at every viewport width. */
+.hubspot-page .showcase-catalog-grid.circular {
+  align-items: stretch;
+  padding: 0;
+}
+
+.hubspot-page .showcase-catalog-grid.circular > * {
+  display: flex;
+  min-width: 0;
+}
+
+.hubspot-page .showcase-catalog-grid.circular .showcase-product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.hubspot-page .showcase-catalog-grid.circular .showcase-product-art {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 0;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--primary) 12%, var(--surface));
+}
+
+.hubspot-page .showcase-catalog-grid.circular .showcase-product-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+}
+
+.hubspot-page .showcase-catalog-grid.circular .showcase-product-copy {
+  flex: 1;
+  padding: 18px 8px 8px;
+}
+
+.hubspot-page .showcase-catalog-grid.circular .showcase-product-copy h3 {
+  min-height: 2.4em;
+  margin: 8px 0 6px;
+  font-family: Georgia, serif;
+  font-size: clamp(20px, 2vw, 25px);
+  line-height: 1.2;
+}
+
+.hubspot-page .showcase-catalog-grid.circular .showcase-product-copy > p:not(.eyebrow) {
+  min-height: 3.1em;
+  margin-bottom: 0;
+}
+
+.hubspot-page .showcase-catalog-grid.circular .showcase-product-footer {
+  align-items: flex-end;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.hubspot-page .showcase-catalog-grid.circular .showcase-product-footer > strong {
+  flex: 0 0 auto;
+  font-size: clamp(15px, 1.8vw, 19px);
+}
+
+.hubspot-page .showcase-catalog-grid.circular .showcase-product-actions {
+  flex: 1 1 auto;
+}
+
+.hubspot-page .showcase-catalog-grid.circular .whatsapp-cta,
+.hubspot-page .showcase-catalog-grid.circular .product-detail-link {
+  min-height: 36px;
+  padding: 9px 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 980px) {
+  .hubspot-page .showcase-catalog-grid.circular {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 560px) {
+  .hubspot-page .showcase-catalog-grid.circular {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .hubspot-page .showcase-catalog-grid.circular .showcase-product-art {
+    aspect-ratio: 1.35;
+    min-height: 0;
+  }
+
+  .hubspot-page .showcase-catalog-grid.circular .showcase-product-copy h3,
+  .hubspot-page .showcase-catalog-grid.circular .showcase-product-copy > p:not(.eyebrow) {
+    min-height: 0;
+  }
+
+  .hubspot-page .showcase-catalog-grid.circular .showcase-product-footer {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hubspot-page .showcase-catalog-grid.circular .showcase-product-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .hubspot-page .showcase-catalog-grid.circular .whatsapp-cta,
+  .hubspot-page .showcase-catalog-grid.circular .product-detail-link {
+    flex: 1;
+    text-align: center;
   }
 }

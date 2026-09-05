@@ -78,7 +78,8 @@ function ShowcaseTile({
   return (
     <AnimatedContent>
       <SpotlightCard className={`preview-card preview-${config.slug}`}>
-        <div className="preview-art">
+        <div className={`preview-art ${config.image ? "has-image" : ""}`}>
+          {config.image && <img src={config.image} alt="" />}
           <span>{config.showcase.badge}</span>
           <strong>{config.showcase.title}</strong>
           <i />

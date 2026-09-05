@@ -34,6 +34,34 @@ a:focus-visible {
   outline: 3px solid var(--primary);
   outline-offset: 3px;
 }
+.app-header-show,
+.app-header-hide {
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.app-header-show {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 20;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.app-header-hide {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1;
+}
+
 .app-header {
   position: sticky;
   top: 0;
@@ -285,6 +313,29 @@ h3 {
 }
 .preview-example3 .preview-art {
   background: linear-gradient(135deg, #635bff, #f478b8);
+}
+.preview-art.has-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.72;
+  transition: transform 300ms ease;
+}
+.preview-card:hover .preview-art.has-image img {
+  transform: scale(1.04);
+}
+.preview-art.has-image:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #0008, transparent 75%), linear-gradient(0deg, #0008, transparent 58%);
+}
+.preview-art.has-image span,
+.preview-art.has-image strong,
+.preview-art.has-image i {
+  z-index: 1;
 }
 .preview-art strong {
   position: absolute;
