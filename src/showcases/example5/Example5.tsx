@@ -18,12 +18,25 @@ export default function Example5({
   const [category, setCategory] = useState("");
   const [query, setQuery] = useState("");
   const t = data.theme[theme];
-  const visibleProducts = useMemo(() => data.products.filter((product) => !product.hide), []);
-  const categories = useMemo(() => [...new Set(visibleProducts.map((product) => product.category))], [visibleProducts]);
+  const visibleProducts = useMemo(
+    () => data.products.filter((product) => !product.hide),
+    [],
+  );
+  const categories = useMemo(
+    () => [...new Set(visibleProducts.map((product) => product.category))],
+    [visibleProducts],
+  );
   const filteredProducts = visibleProducts.filter((product) => {
     const term = query.trim().toLowerCase();
     const matchesCategory = !category || product.category === category;
-    const matchesSearch = !term || [product.name, product.category, product.variant, product.description].some((value) => value.toLowerCase().includes(term));
+    const matchesSearch =
+      !term ||
+      [
+        product.name,
+        product.category,
+        product.variant,
+        product.description,
+      ].some((value) => value.toLowerCase().includes(term));
     return matchesCategory && matchesSearch;
   });
   return (
@@ -91,11 +104,32 @@ export default function Example5({
         <div className="canva-catalog-tools">
           <label className="canva-search">
             <span>Search</span>
-            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search products" type="search" />
+            <input
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Search products"
+              type="search"
+            />
           </label>
-          <div className="canva-category-filter" aria-label="Filter by category">
-            <button className={!category ? "is-active" : ""} onClick={() => setCategory("")}>All</button>
-            {categories.map((item) => <button className={category === item ? "is-active" : ""} key={item} onClick={() => setCategory(item)}>{item}</button>)}
+          <div
+            className="canva-category-filter"
+            aria-label="Filter by category"
+          >
+            <button
+              className={!category ? "is-active" : ""}
+              onClick={() => setCategory("")}
+            >
+              All
+            </button>
+            {categories.map((item) => (
+              <button
+                className={category === item ? "is-active" : ""}
+                key={item}
+                onClick={() => setCategory(item)}
+              >
+                {item}
+              </button>
+            ))}
           </div>
         </div>
         <Masonry>
@@ -114,7 +148,9 @@ export default function Example5({
             </div>
           ))}
         </Masonry>
-        {!filteredProducts.length && <p className="canva-empty">No products match your search.</p>}
+        {!filteredProducts.length && (
+          <p className="canva-empty">No products match your search.</p>
+        )}
       </section>
       <ShowcaseInfo config={data} />
     </main>

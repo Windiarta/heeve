@@ -1,1 +1,148 @@
-{"slug":"example2","title":"Deploy Goods","subtitle":"Template siap pakai untuk tim kecil.","companyAddress":"Jl. Teknologi No. 8, Jakarta","companyEmail":"hello@deploygoods.example","companyPhone":"+62 21 555 0202","contactPersonName":"Raka Studio","contactPersonEmail":"raka@deploygoods.example","contactPersonPhone":"+62 812 2000 3000","contactPersonWhatsapp":"6281220003000","headline":"Good tools move ideas forward.","content":"Template, kit, dan panduan untuk membangun produk tanpa hambatan.","image":"","instagram":"https://instagram.com/deploygoods","facebook":"","twitterX":"","tokopedia":"","tiktok":"","shopee":"","lazada":"","others":[],"owner":{"name":"Raka Studio","handle":"@rakastudio"},"showcase":{"title":"Deploy Goods","category":"Digital templates","description":"Template siap pakai untuk tim kecil yang bergerak cepat.","badge":"New drop"},"hero":{"eyebrow":"Ship better digital work","title":"Good tools move ideas forward.","description":"Template, kit, dan panduan untuk membangun produk tanpa hambatan.","primaryAction":"Browse templates","secondaryAction":"View bundle"},"products":[{"number":1,"category":"Template","name":"Portfolio Starter","variant":"Figma + HTML","description":"Landing page personal responsif.","price":249000,"unit":"pcs","photoUrls":[],"stockOut":false,"hide":false},{"number":2,"category":"UI kit","name":"SaaS Dashboard","variant":"Pro license","description":"Komponen dashboard lengkap.","price":599000,"unit":"license","photoUrls":[],"stockOut":false,"hide":false},{"number":3,"category":"Guide","name":"Launch Guide","variant":"PDF, 80 pages","description":"Panduan merilis produk pertama.","price":99000,"unit":"file","photoUrls":[],"stockOut":false,"hide":false}],"theme":{"light":{"background":"#f7f9fb","surface":"#ffffff","text":"#172b4d","muted":"#52606d","primary":"#00a896"},"dark":{"background":"#101820","surface":"#172532","text":"#f5f7fa","muted":"#a8b6c4","primary":"#43d9c7"}}}
+{
+  "slug": "example2",
+  "title": "Deploy Goods",
+  "subtitle": "Layanan digital untuk brand yang ingin bergerak lebih cepat.",
+  "companyAddress": "Jl. Teknologi No. 8, Jakarta",
+  "companyEmail": "hello@deploygoods.example",
+  "companyPhone": "+62 21 555 0202",
+  "contactPersonName": "Raka Studio",
+  "contactPersonEmail": "raka@deploygoods.example",
+  "contactPersonPhone": "+62 812 2000 3000",
+  "contactPersonWhatsapp": "6281220003000",
+  "headline": "Digital work, shipped with clarity.",
+  "content": "Layanan desain dan pengembangan digital untuk mengubah ide menjadi pengalaman yang siap digunakan.",
+  "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1600&q=85",
+  "instagram": "https://instagram.com/deploygoods",
+  "facebook": "",
+  "twitterX": "",
+  "tokopedia": "",
+  "tiktok": "",
+  "shopee": "",
+  "lazada": "",
+  "others": [],
+  "owner": {
+    "name": "Raka Studio",
+    "handle": "@rakastudio"
+  },
+  "showcase": {
+    "title": "Deploy Goods",
+    "category": "Digital services",
+    "description": "Partner digital untuk tim kecil yang membutuhkan hasil cepat, rapi, dan terukur.",
+    "badge": "Now booking"
+  },
+  "hero": {
+    "eyebrow": "Design, build, launch",
+    "title": "Digital work, shipped with clarity.",
+    "description": "Dari halaman pertama hingga sistem produk, kami membantu tim mengirim pekerjaan digital yang siap tumbuh.",
+    "primaryAction": "Lihat layanan",
+    "secondaryAction": "Mulai konsultasi"
+  },
+  "products": [
+    {
+      "number": 1,
+      "category": "Web Design",
+      "name": "Conversion Landing Page",
+      "variant": "Strategy, UI, copy, and build",
+      "description": "Landing page responsif yang dirancang untuk menjelaskan nilai produk dan mendorong konversi.",
+      "price": 8500000,
+      "unit": "project",
+      "photoUrls": [
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 2,
+      "category": "Product Design",
+      "name": "SaaS Product Sprint",
+      "variant": "UX flow and high-fidelity prototype",
+      "description": "Sprint terarah untuk memvalidasi alur utama produk sebelum masuk tahap development.",
+      "price": 12000000,
+      "unit": "sprint",
+      "photoUrls": [
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=85"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 3,
+      "category": "UI Engineering",
+      "name": "Dashboard Build",
+      "variant": "React interface and responsive states",
+      "description": "Dashboard operasional dengan komponen reusable, state lengkap, dan tampilan siap diintegrasikan.",
+      "price": 18500000,
+      "unit": "project",
+      "photoUrls": [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85",
+        "https://images.unsplash.com/photo-1543286386-713bae881b32?auto=format&fit=crop&w=1200&q=85"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 4,
+      "category": "Brand Digital",
+      "name": "Brand Website System",
+      "variant": "Visual direction and component kit",
+      "description": "Fondasi visual digital untuk menjaga brand tetap konsisten di website dan seluruh touchpoint.",
+      "price": 9500000,
+      "unit": "project",
+      "photoUrls": [
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=85",
+        "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 5,
+      "category": "Design System",
+      "name": "Interface Starter Kit",
+      "variant": "Tokens, components, and documentation",
+      "description": "Sistem komponen yang membantu tim mendesain dan membangun fitur baru dengan lebih konsisten.",
+      "price": 7500000,
+      "unit": "kit",
+      "photoUrls": [
+        "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=85",
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85"
+      ],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 6,
+      "category": "Growth",
+      "name": "Launch Readiness",
+      "variant": "Audit, polish, and launch checklist",
+      "description": "Review menyeluruh untuk memastikan produk siap dipresentasikan, dipasarkan, dan diluncurkan.",
+      "price": 4500000,
+      "unit": "audit",
+      "photoUrls": [
+        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=85",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=85"
+      ],
+      "stockOut": false,
+      "hide": false
+    }
+  ],
+  "theme": {
+    "light": {
+      "background": "#f7f9fb",
+      "surface": "#ffffff",
+      "text": "#172b4d",
+      "muted": "#52606d",
+      "primary": "#2e51ed"
+    },
+    "dark": {
+      "background": "#101820",
+      "surface": "#172532",
+      "text": "#f5f7fa",
+      "muted": "#a8b6c4",
+      "primary": "#2e51ed"
+    }
+  }
+}

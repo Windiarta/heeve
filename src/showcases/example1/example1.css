@@ -18,7 +18,11 @@
   background: color-mix(in srgb, var(--bg) 84%, #000);
   border-right: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
 }
-.spotify-sidebar-head { display: flex; align-items: center; justify-content: space-between; }
+.spotify-sidebar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .spotify-brand {
   border: 0;
   padding: 0;
@@ -26,10 +30,14 @@
   color: var(--text);
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   text-align: left;
 }
-.spotify-sidebar nav { display: grid; gap: 8px; margin-top: 48px; }
+.spotify-sidebar nav {
+  display: grid;
+  gap: 8px;
+  margin-top: 48px;
+}
 .spotify-sidebar nav button {
   border: 0;
   border-left: 3px solid transparent;
@@ -45,8 +53,12 @@
   background: color-mix(in srgb, var(--text) 10%, transparent);
   color: var(--text);
 }
-.spotify-menu-toggle { display: none; }
-.spotify-content { min-width: 0; }
+.spotify-menu-toggle {
+  display: none;
+}
+.spotify-content {
+  min-width: 0;
+}
 .spotify-hero {
   position: relative;
   display: flex;
@@ -54,11 +66,33 @@
   align-items: center;
   overflow: hidden;
   padding: 72px clamp(28px, 7vw, 100px);
-  background: radial-gradient(circle at 80% 40%, color-mix(in srgb, var(--primary) 25%, transparent), transparent 28%), linear-gradient(135deg, color-mix(in srgb, var(--primary) 20%, var(--bg)), var(--bg) 70%);
+  background:
+    radial-gradient(
+      circle at 80% 40%,
+      color-mix(in srgb, var(--primary) 25%, transparent),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--primary) 20%, var(--bg)),
+      var(--bg) 70%
+    );
 }
-.spotify-hero-copy { position: relative; z-index: 1; max-width: 600px; }
-.spotify-hero h1 { max-width: 650px; font-size: clamp(48px, 7vw, 86px); letter-spacing: -.06em; }
-.spotify-hero-copy > p:not(.eyebrow) { max-width: 480px; color: var(--muted); line-height: 1.6; }
+.spotify-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+.spotify-hero h1 {
+  max-width: 650px;
+  font-size: clamp(48px, 7vw, 86px);
+  letter-spacing: -0.06em;
+}
+.spotify-hero-copy > p:not(.eyebrow) {
+  max-width: 480px;
+  color: var(--muted);
+  line-height: 1.6;
+}
 .spotify-play {
   border: 0;
   border-radius: 999px;
@@ -67,7 +101,10 @@
   color: var(--bg);
   font-weight: 700;
 }
-.spotify-play:hover { filter: brightness(1.1); transform: translateY(-2px); }
+.spotify-play:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
 .spotify-disc {
   position: absolute;
   right: 12%;
@@ -78,14 +115,27 @@
   padding: 35px;
   border-radius: 50%;
   overflow: hidden;
-  background: repeating-radial-gradient(circle at center, #151515 0 2px, #080808 3px 5px), conic-gradient(var(--primary), color-mix(in srgb, var(--primary) 35%, var(--bg)), var(--primary));
-  box-shadow: 0 30px 80px rgb(0 0 0 / 35%), 0 10px 24px color-mix(in srgb, var(--primary) 28%, transparent), inset 0 0 0 1px rgb(255 255 255 / 18%);
+  background:
+    repeating-radial-gradient(circle at center, #151515 0 2px, #080808 3px 5px),
+    conic-gradient(
+      var(--primary),
+      color-mix(in srgb, var(--primary) 35%, var(--bg)),
+      var(--primary)
+    );
+  box-shadow:
+    0 30px 80px rgb(0 0 0 / 35%),
+    0 10px 24px color-mix(in srgb, var(--primary) 28%, transparent),
+    inset 0 0 0 1px rgb(255 255 255 / 18%);
   transform: rotate(12deg);
   animation: spotify-disc-spin 22s linear infinite;
 }
 @keyframes spotify-disc-spin {
-  from { transform: rotate(12deg); }
-  to { transform: rotate(372deg); }
+  from {
+    transform: rotate(12deg);
+  }
+  to {
+    transform: rotate(372deg);
+  }
 }
 .spotify-disc::before {
   content: "";
@@ -93,7 +143,9 @@
   inset: 7%;
   border: 1px solid rgb(255 255 255 / 18%);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 6px rgb(0 0 0 / 14%), inset 0 0 0 7px rgb(255 255 255 / 8%);
+  box-shadow:
+    inset 0 0 0 6px rgb(0 0 0 / 14%),
+    inset 0 0 0 7px rgb(255 255 255 / 8%);
   pointer-events: none;
 }
 .spotify-disc img {
@@ -104,21 +156,62 @@
   border: 5px solid #111;
   border-radius: 50%;
   object-fit: cover;
-  opacity: .96;
-  box-shadow: 0 0 0 1px rgb(255 255 255 / 22%), 0 8px 18px rgb(0 0 0 / 45%);
+  opacity: 0.96;
+  box-shadow:
+    0 0 0 1px rgb(255 255 255 / 22%),
+    0 8px 18px rgb(0 0 0 / 45%);
   mix-blend-mode: normal;
 }
 .spotify-disc strong,
-.spotify-disc span { position: relative; z-index: 1; }
-.spotify-disc strong { font-size: 32px; line-height: .9; letter-spacing: -.08em; }
-.spotify-disc span { color: var(--muted); font: 11px "DM Mono", monospace; text-transform: uppercase; }
-.spotify-release { padding: 64px clamp(24px, 5vw, 72px); background: var(--bg); }
-.spotify-release > header { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
-.spotify-release h2 { max-width: 600px; font-size: 32px; }
-.spotify-link { border: 0; background: none; color: var(--muted); font-weight: 700; }
-.spotify-link:hover { color: var(--primary); }
-.spotify-release .showcase-product { border: 0; border-radius: 6px; background: transparent; }
-.spotify-release .showcase-product:hover { background: color-mix(in srgb, var(--text) 8%, transparent); transform: translateY(-4px); }
+.spotify-disc span {
+  position: relative;
+  z-index: 1;
+}
+.spotify-disc strong {
+  font-size: 32px;
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+}
+.spotify-disc span {
+  color: var(--muted);
+  font:
+    11px "DM Mono",
+    monospace;
+  text-transform: uppercase;
+}
+.spotify-release {
+  padding: 64px clamp(24px, 5vw, 72px);
+  background: var(--bg);
+}
+.spotify-release > header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+.spotify-release h2 {
+  max-width: 600px;
+  font-size: 32px;
+}
+.spotify-link {
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-weight: 700;
+}
+.spotify-link:hover {
+  color: var(--primary);
+}
+.spotify-release .showcase-product {
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+}
+.spotify-release .showcase-product:hover {
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+  transform: translateY(-4px);
+}
 .spotify-release .showcase-product-art {
   height: 260px;
   padding: 0;
@@ -131,20 +224,62 @@
   margin: 0;
   object-fit: cover;
 }
-.spotify-release .showcase-product-copy strong { color: var(--primary); }
-.spotify-release .category-filter button { border-color: color-mix(in srgb, var(--text) 22%, transparent); color: var(--muted); }
-.spotify-release .category-filter button.active { border-color: var(--primary); background: var(--primary); color: var(--bg); }
+.spotify-release .showcase-product-copy strong {
+  color: var(--primary);
+}
+.spotify-release .category-filter button {
+  border-color: color-mix(in srgb, var(--text) 22%, transparent);
+  color: var(--muted);
+}
+.spotify-release .category-filter button.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--bg);
+}
 @media (max-width: 800px) {
-  .spotify-page { display: block; padding-left: 0; }
-  .spotify-sidebar { display: none; }
-  .spotify-hero { min-height: 620px; display: block; padding: 72px 24px 250px; }
-  .spotify-hero h1 { font-size: clamp(48px, 15vw, 72px); }
-  .spotify-hero-copy > p:not(.eyebrow) { font-size: 16px; }
-  .spotify-disc { right: 24px; bottom: 32px; width: 180px; height: 180px; padding: 22px; transform: rotate(8deg); }
-  .spotify-disc strong { font-size: 24px; }
-  .spotify-release { padding: 52px 20px; }
-  .spotify-release > header { display: block; margin-bottom: 28px; }
-  .spotify-release > header .spotify-link { margin-top: 16px; }
-  .spotify-release .showcase-catalog-grid.editorial { grid-template-columns: 1fr; }
-  .spotify-release .showcase-product-art { height: 210px; }
+  .spotify-page {
+    display: block;
+    padding-left: 0;
+  }
+  .spotify-sidebar {
+    display: none;
+  }
+  .spotify-hero {
+    min-height: 620px;
+    display: block;
+    padding: 72px 24px 250px;
+  }
+  .spotify-hero h1 {
+    font-size: clamp(48px, 15vw, 72px);
+  }
+  .spotify-hero-copy > p:not(.eyebrow) {
+    font-size: 16px;
+  }
+  .spotify-disc {
+    right: 24px;
+    bottom: 32px;
+    width: 180px;
+    height: 180px;
+    padding: 22px;
+    transform: rotate(8deg);
+  }
+  .spotify-disc strong {
+    font-size: 24px;
+  }
+  .spotify-release {
+    padding: 52px 20px;
+  }
+  .spotify-release > header {
+    display: block;
+    margin-bottom: 28px;
+  }
+  .spotify-release > header .spotify-link {
+    margin-top: 16px;
+  }
+  .spotify-release .showcase-catalog-grid.editorial {
+    grid-template-columns: 1fr;
+  }
+  .spotify-release .showcase-product-art {
+    height: 210px;
+  }
 }

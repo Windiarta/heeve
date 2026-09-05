@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=Martian+Mono:wght@400;500&display=swap");
 /* Netlify-inspired: dark technical hero, terminal artifact, clean light library. */
 .netlify-page {
-  font-family: "Figtree", "DM Sans", sans-serif;
+  font-family: "Instrument Sans", "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
 }
 .netlify-hero {
+  isolation: isolate;
   min-height: 680px;
   background: #181a1c;
   color: #fff;
@@ -15,7 +17,7 @@
 }
 .netlify-topbar {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   height: 74px;
   display: flex;
   align-items: center;
@@ -41,12 +43,13 @@
 }
 .netlify-hero-inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 1160px;
   margin: auto;
-  padding: 112px 0 150px;
+  padding: 112px min(40%, 460px) 150px 0;
 }
 .netlify-hero-inner h1 {
+  font-family: "Figtree", "Segoe UI", sans-serif;
   font-weight: 800;
   max-width: 800px;
   font-size: clamp(52px, 8vw, 96px);
@@ -61,8 +64,12 @@
 }
 .netlify-cta {
   min-height: 44px;
-  background: #16d9d9;
-  color: #181a1c;
+  font:
+    600 14px/21px "Figtree",
+    "Segoe UI",
+    sans-serif;
+  background: var(--cta);
+  color: var(--cta-text);
   border: 0;
   border-radius: 6px;
   padding: 12px 24px;
@@ -73,27 +80,187 @@
 }
 .netlify-cta:hover {
   opacity: 0.85;
-  box-shadow: 0 4px 12px #16d9d940;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--cta) 25%, transparent);
 }
 .netlify-status {
   position: absolute;
-  right: 5%;
-  bottom: 28px;
-  width: min(330px, 38%);
-  display: grid;
-  gap: 10px;
-  padding: 20px 22px;
+  top: 50%;
+  right: 3%;
+  bottom: auto;
+  width: min(470px, 44%);
+  min-height: 350px;
+  overflow: hidden;
+  border: 1px solid #ffffff2e;
+  border-radius: 6px;
   background: #24292d;
   color: #fff;
-  border: 1px solid #ffffff20;
-  border-radius: 6px;
   box-shadow: 0 24px 60px #0008;
+  transform: translateY(-42%);
+  animation: service-preview-fade-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes service-preview-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-28%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-42%);
+  }
+}
+.terminal-card {
+  display: grid;
+  gap: 20px;
+  min-height: 320px;
+  padding: 26px 28px;
+  background: #24292d;
+  color: #fff;
+}
+.terminal-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.terminal-topbar > span {
+  display: flex;
+  gap: 5px;
+}
+.terminal-topbar i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #dd0000;
+}
+.terminal-topbar i:nth-child(2) {
+  background: #f5b700;
+}
+.terminal-topbar i:nth-child(3) {
+  background: #16d9d9;
+}
+.terminal-topbar code {
+  color: #9da8b4;
+  font:
+    11px "Martian Mono",
+    monospace;
+}
+.terminal-body {
+  display: grid;
+  gap: 16px;
+  align-content: center;
+  min-height: 230px;
+  padding: 20px;
+  border: 1px solid #ffffff20;
+  border-radius: 4px;
+  background: #181a1c;
+  color: #c5ccd5;
+  font:
+    13px/1.6 "Martian Mono",
+    monospace;
+}
+.terminal-body p {
+  margin: 0;
+}
+.terminal-body p b {
+  color: var(--cta);
+}
+.terminal-body .text-type {
+  min-height: 24px;
+  color: var(--cta);
+}
+.terminal-cursor {
+  color: var(--cta);
+}
+.terminal-success {
+  color: #b6f2dd;
+}
+.terminal-body small {
+  color: #7f8994;
+  font:
+    11px "Martian Mono",
+    monospace;
+}
+.blueprint-topline,
+.blueprint-price,
+.blueprint-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.blueprint-topline {
+  color: var(--cta);
+  font:
+    500 11px "Martian Mono",
+    monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.blueprint-heading {
+  display: grid;
+  gap: 7px;
+}
+.blueprint-heading span,
+.blueprint-price span {
+  color: #9da8b4;
+  font-size: 12px;
+}
+.blueprint-heading strong {
+  font:
+    800 30px/1.05 "Figtree",
+    sans-serif;
+}
+.blueprint-heading small {
+  color: #c5ccd5;
+  font-size: 13px;
+}
+.blueprint-price {
+  padding: 15px 0;
+  border-top: 1px solid #ffffff20;
+  border-bottom: 1px solid #ffffff20;
+}
+.blueprint-price b {
+  color: var(--cta);
+  font:
+    700 18px "Martian Mono",
+    monospace;
+}
+.blueprint-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.blueprint-steps span {
+  padding-top: 9px;
+  border-top: 2px solid #ffffff30;
+  color: #7f8994;
+  font-size: 10px;
+}
+.blueprint-steps .is-done {
+  border-color: var(--cta);
+  color: #fff;
+}
+.blueprint-action {
+  width: 100%;
+  border: 1px solid var(--cta);
+  border-radius: 6px;
+  padding: 11px 14px;
+  background: transparent;
+  color: var(--cta);
+  font:
+    600 14px/21px "Figtree",
+    sans-serif;
+  text-align: left;
+}
+.blueprint-action:hover {
+  background: var(--cta);
+  color: var(--cta-text);
 }
 .netlify-status-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #16d9d9;
+  color: var(--cta);
   font:
     12px "DM Mono",
     monospace;
@@ -107,7 +274,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #16d9d9;
+  background: var(--cta);
 }
 .netlify-status strong {
   font:
@@ -152,7 +319,7 @@
 .netlify-link {
   border: 0;
   background: none;
-  color: #2e51ed;
+  color: var(--link);
   text-decoration: none;
   font-size: 16px;
   padding: 8px 0;
@@ -169,6 +336,7 @@
   background: var(--surface);
   box-shadow: 0 8px 24px #00000012;
   padding: 24px;
+  min-width: 0;
   transition:
     transform 0.2s,
     box-shadow 0.2s;
@@ -189,33 +357,130 @@
   font-weight: 700;
 }
 .netlify-library .showcase-product-copy strong {
-  color: #2e51ed;
+  color: var(--primary);
 }
 .netlify-library .category-filter button {
   border-radius: 6px;
 }
+.netlify-library .catalog-toolbar {
+  flex-wrap: wrap;
+  align-items: center;
+}
+.catalog-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: min(100%, 260px);
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid #c1c1c1;
+  border-radius: 4px;
+  background: var(--surface);
+  color: #545a61;
+}
+.catalog-search:focus-within {
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 10%, transparent);
+}
+.catalog-search input {
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font:
+    400 16px/24px "Instrument Sans",
+    sans-serif;
+}
+.catalog-search input::placeholder {
+  color: #757575;
+}
+.netlify-library .showcase-product:nth-child(1) {
+  border: 2px solid var(--primary);
+  box-shadow: inset 0 0 0 2px
+    color-mix(in srgb, var(--primary) 12%, transparent);
+}
+.netlify-library .showcase-product:nth-child(1)::before {
+  content: "Featured service";
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 8px;
+  border-radius: 2px;
+  background: var(--primary);
+  color: #fff;
+  font:
+    600 12px/18px "Instrument Sans",
+    sans-serif;
+}
 .netlify-library .category-filter button.active {
-  background: #2e51ed;
-  border-color: #2e51ed;
+  background: var(--primary);
+  border-color: var(--primary);
   color: #fff;
 }
 .netlify-library .showcase-product-art {
   aspect-ratio: 1.55;
   height: auto;
   min-height: 190px;
+  background: linear-gradient(135deg, var(--text), var(--cta));
+}
+.netlify-library .showcase-product-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+}
+.netlify-library .showcase-product-copy h3 {
+  font-size: 24px;
+  line-height: 1.1;
+}
+.netlify-library .showcase-product-copy small {
+  display: block;
+  min-height: 21px;
+  color: var(--muted);
+}
+.netlify-library .showcase-product-copy p:not(.eyebrow) {
+  min-height: 48px;
+}
+.netlify-library .showcase-product-footer {
+  align-items: end;
 }
 .netlify-library .whatsapp-cta {
-  background: #16d9d9;
-  color: #181a1c;
+  min-height: 44px;
+  border-radius: 6px;
+  font:
+    600 14px/21px Figtree,
+    "Segoe UI",
+    sans-serif;
+}
+.netlify-library .whatsapp-cta {
+  background: var(--cta);
+  font-family: "Figtree", "Segoe UI", sans-serif;
+  color: var(--cta-text);
 }
 .netlify-library .product-detail-link {
   border-radius: 6px;
-  border-color: #2e51ed;
-  color: #2e51ed;
+  border-color: var(--primary);
+  color: var(--primary);
 }
 .netlify-library .product-detail-link:hover {
-  background: #2e51ed;
+  background: var(--primary);
   color: #fff;
+}
+.netlify-cursor-grid {
+  z-index: 1;
+  opacity: 0.7;
+}
+@keyframes service-preview-fade-in-mobile {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @media (max-width: 800px) {
   .netlify-hero {
@@ -235,11 +500,25 @@
     font-size: 16px;
   }
   .netlify-status {
+    top: auto;
     left: 0;
     right: 0;
     bottom: 24px;
     width: 100%;
-    padding: 18px 20px;
+    min-height: 280px;
+    padding: 22px 20px;
+    transform: none;
+    animation-name: service-preview-fade-in-mobile;
+  }
+  .terminal-card {
+    min-height: 300px;
+    padding: 22px 20px;
+  }
+  .blueprint-heading strong {
+    font-size: 24px;
+  }
+  .blueprint-steps span {
+    font-size: 9px;
   }
   .netlify-status strong {
     font-size: 22px;

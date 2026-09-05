@@ -1,0 +1,11 @@
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+.text-type__cursor {
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.text-type__cursor--hidden {
+  display: none;
+}

@@ -15,14 +15,21 @@ export function GalleryPage({
   const [category, setCategory] = useState("All");
   const entries = Object.entries(showcaseRegistry);
   const categories = useMemo(
-    () => ["All", ...new Set(entries.map(([, entry]) => entry.config.showcase.category))],
+    () => [
+      "All",
+      ...new Set(entries.map(([, entry]) => entry.config.showcase.category)),
+    ],
     [entries],
   );
-  const visibleEntries = category === "All"
-    ? entries
-    : entries.filter(([, entry]) => entry.config.showcase.category === category);
+  const visibleEntries =
+    category === "All"
+      ? entries
+      : entries.filter(
+          ([, entry]) => entry.config.showcase.category === category,
+        );
   const productCount = entries.reduce(
-    (total, [, entry]) => total + entry.config.products.filter((product) => !product.hide).length,
+    (total, [, entry]) =>
+      total + entry.config.products.filter((product) => !product.hide).length,
     0,
   );
 
@@ -36,13 +43,17 @@ export function GalleryPage({
             <BlurText>Make your shop impossible to scroll past.</BlurText>
           </h1>
           <p>
-            Enam storefront siap jelajah. Enam arah visual berbeda untuk membantu
-            brand menemukan cara terbaik bercerita dan menjual.
+            Enam storefront siap jelajah. Enam arah visual berbeda untuk
+            membantu brand menemukan cara terbaik bercerita dan menjual.
           </p>
           <div className="home-hero-actions">
             <button
               className="primary-button"
-              onClick={() => document.getElementById("showcases")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                document
+                  .getElementById("showcases")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               Jelajahi showcase <span>↓</span>
             </button>
@@ -51,15 +62,28 @@ export function GalleryPage({
             </button>
           </div>
           <div className="home-metrics" aria-label="Gallery statistics">
-            <div><strong>{entries.length}</strong><span>directions</span></div>
-            <div><strong>{productCount}+</strong><span>products</span></div>
-            <div><strong>01</strong><span>starting point</span></div>
+            <div>
+              <strong>{entries.length}</strong>
+              <span>directions</span>
+            </div>
+            <div>
+              <strong>{productCount}+</strong>
+              <span>products</span>
+            </div>
+            <div>
+              <strong>01</strong>
+              <span>starting point</span>
+            </div>
           </div>
         </div>
         <div className="hero-orbit home-orbit" aria-hidden="true">
           <span>scroll to explore</span>
           <b>✦</b>
-          <small>made for<br />first impressions</small>
+          <small>
+            made for
+            <br />
+            first impressions
+          </small>
         </div>
       </section>
 
@@ -67,11 +91,22 @@ export function GalleryPage({
         <div className="section-heading home-section-heading">
           <div>
             <p className="eyebrow">Curated storefront systems</p>
-            <h2>Pick a point<br />of view.</h2>
+            <h2>
+              Pick a point
+              <br />
+              of view.
+            </h2>
           </div>
-          <p>Setiap showcase adalah template yang bisa kamu isi dengan produk, cerita, dan karakter brand sendiri.</p>
+          <p>
+            Setiap showcase adalah template yang bisa kamu isi dengan produk,
+            cerita, dan karakter brand sendiri.
+          </p>
         </div>
-        <div className="home-filter" role="tablist" aria-label="Filter showcase">
+        <div
+          className="home-filter"
+          role="tablist"
+          aria-label="Filter showcase"
+        >
           {categories.map((item) => (
             <button
               key={item}
@@ -136,7 +171,8 @@ function ShowcaseTile({
           }}
           aria-label={`Buka ${config.showcase.title}`}
         >
-          <span>0{index + 1}</span><b>↗</b>
+          <span>0{index + 1}</span>
+          <b>↗</b>
         </button>
         <div className={`preview-art ${image ? "has-image" : ""}`}>
           {image && <img src={image} alt="" />}
@@ -145,10 +181,17 @@ function ShowcaseTile({
           <i />
         </div>
         <div className="preview-content">
-          <div className="preview-meta"><p className="eyebrow">{config.showcase.category}</p><span>{config.products.filter((product) => !product.hide).length} items</span></div>
+          <div className="preview-meta">
+            <p className="eyebrow">{config.showcase.category}</p>
+            <span>
+              {config.products.filter((product) => !product.hide).length} items
+            </span>
+          </div>
           <h3>{config.hero.title || config.title || config.showcase.title}</h3>
           <p>{config.subtitle || config.showcase.description}</p>
-          <small>{config.owner.name} · {config.owner.handle}</small>
+          <small>
+            {config.owner.name} · {config.owner.handle}
+          </small>
         </div>
       </SpotlightCard>
     </AnimatedContent>

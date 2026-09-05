@@ -10,6 +10,7 @@ export function ShowcaseCatalog({
   purchaseLabel,
   detailLabel,
   variant,
+  searchEnabled = false,
 }: {
   products: Product[];
   slug: string;
@@ -18,8 +19,10 @@ export function ShowcaseCatalog({
   purchaseLabel?: string;
   detailLabel?: string;
   variant: "editorial" | "masonry" | "circular";
+  searchEnabled?: boolean;
 }) {
   const [category, setCategory] = useState("");
+  const [search, setSearch] = useState("");
   const visible = products.filter((product) => !product.hide);
   const categories = useMemo(
     () => [...new Set(visible.map((product) => product.category))],
@@ -28,10 +31,28 @@ export function ShowcaseCatalog({
   const filtered = category
     ? visible.filter((product) => product.category === category)
     : visible;
+  const searched = search.trim()
+    ? filtered.filter((product) =>
+        `${product.name} ${product.category} ${product.variant} ${product.description}`
+          .toLowerCase()
+          .includes(search.trim().toLowerCase()),
+      )
+    : filtered;
   return (
     <div className={`showcase-catalog catalog-${variant}`}>
       <div className="catalog-toolbar">
-        <span className="catalog-count">{filtered.length} Products</span>
+        <span className="catalog-count">{searched.length} Services</span>
+        {searchEnabled && (
+          <label className="catalog-search">
+            <span>⌕</span>
+            <input
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder="Search services"
+              aria-label="Search services"
+            />
+          </label>
+        )}
         <div className="category-filter">
           <button
             className={!category ? "active" : ""}
@@ -51,7 +72,7 @@ export function ShowcaseCatalog({
         </div>
       </div>
       <div className={`showcase-catalog-grid ${variant}`}>
-        {filtered.map((product, index) => (
+        {searched.map((product, index) => (
           <AnimatedContent key={product.number}>
             <ShowcaseProductCard
               product={product}

@@ -1,6 +1,8 @@
 import config from "./config.json";
 import "./example2.css";
-import { Aurora } from "../../components/react-bits/Aurora";
+
+import CursorGrid from "../../components/react-bits/CursorGrid";
+import TextType from "../../components/react-bits/TextType";
 import { BlurText } from "../../components/react-bits/BlurText";
 import { ShowcaseCatalog } from "../../components/ShowcaseCatalog";
 import { ShowcaseInfo } from "../../components/ShowcaseInfo";
@@ -24,11 +26,29 @@ export default function Example2({
           "--text": tokens.text,
           "--muted": tokens.muted,
           "--primary": tokens.primary,
+          "--cta": "#16d9d9",
+          "--cta-text": "#181a1c",
+          "--link": "#0e7fe1",
         } as React.CSSProperties
       }
     >
       <section className="netlify-hero">
-        <Aurora />
+        <CursorGrid
+          className="netlify-cursor-grid"
+          cellSize={44}
+          color="#16D9D9"
+          radius={150}
+          falloff="smooth"
+          holdTime={350}
+          fadeDuration={700}
+          lineWidth={1.1}
+          maxOpacity={0.48}
+          fillOpacity={0}
+          gridOpacity={0.04}
+          cellRadius={6}
+          clickPulse
+          pulseSpeed={650}
+        />
         <header className="netlify-topbar">
           <button onClick={() => navigate("/")} className="netlify-wordmark">
             {data.title || data.showcase.title}
@@ -63,22 +83,37 @@ export default function Example2({
             {data.hero.primaryAction} ↗
           </button>
           <div
-            className="netlify-status"
-            aria-label={`${data.owner.handle} ${data.showcase.category}`}
+            className="netlify-status terminal-card"
+            aria-label={`${data.showcase.title} terminal preview`}
           >
-            <div className="netlify-status-top">
-              <span className="netlify-status-dots">
+            <div className="terminal-topbar">
+              <span>
                 <i />
                 <i />
                 <i />
               </span>
-              <span>{data.showcase.badge}</span>
+              <code>{data.slug}/deploy</code>
             </div>
-            <strong>{data.owner.handle}</strong>
-            <span>{data.showcase.category}</span>
-            <small>
-              {data.companyEmail || data.companyAddress || data.subtitle || ""}
-            </small>
+            <div className="terminal-body">
+              <p>
+                <b>$</b> deploy-goods init
+              </p>
+              <TextType
+                text={data.products.map((product) => `› ${product.name}`)}
+                typingSpeed={38}
+                deletingSpeed={18}
+                pauseDuration={1100}
+                cursorCharacter="▋"
+                cursorClassName="terminal-cursor"
+                textColors={["#16d9d9"]}
+              />
+              <p className="terminal-success">
+                <b>✓</b> Ready to ship digital work.
+              </p>
+              <small>
+                {data.products.length} services · {data.showcase.category}
+              </small>
+            </div>
           </div>
         </div>
       </section>
@@ -105,6 +140,7 @@ export default function Example2({
           purchaseLabel={data.hero.primaryAction}
           detailLabel={data.hero.secondaryAction}
           variant="masonry"
+          searchEnabled
         />
       </section>
       <ShowcaseInfo config={data} />

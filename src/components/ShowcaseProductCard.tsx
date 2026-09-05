@@ -23,7 +23,8 @@ export function ShowcaseProductCard({
   const whatsappUrl = whatsapp
     ? `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`
     : `/showcase/${slug}/product/${product.number}`;
-  const openProduct = () => navigate(`/showcase/${slug}/product/${product.number}`);
+  const openProduct = () =>
+    navigate(`/showcase/${slug}/product/${product.number}`);
   return (
     <SpotlightCard
       className={`showcase-product showcase-product-${variant}`}

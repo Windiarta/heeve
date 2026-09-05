@@ -32,10 +32,34 @@ export const showcaseRegistry: Record<
     }>;
   }
 > = {
-  example1: { config: example1, component: Example1, productComponent: Example1ProductPage },
-  example2: { config: example2, component: Example2, productComponent: Example2ProductPage },
-  example3: { config: example3, component: Example3, productComponent: Example3ProductPage },
-  example4: { config: example4, component: Example4, productComponent: Example4ProductPage },
-  example5: { config: example5, component: Example5, productComponent: Example5ProductPage },
-  example6: { config: example6, component: Example6, productComponent: Example6ProductPage },
+  example1: {
+    config: example1,
+    component: Example1,
+    productComponent: Example1ProductPage,
+  },
+  example2: {
+    config: example2,
+    component: Example2,
+    productComponent: Example2ProductPage,
+  },
+  example3: {
+    config: example3,
+    component: Example3,
+    productComponent: Example3ProductPage,
+  },
+  example4: {
+    config: example4,
+    component: Example4,
+    productComponent: Example4ProductPage,
+  },
+  example5: {
+    config: example5,
+    component: Example5,
+    productComponent: Example5ProductPage,
+  },
+  example6: {
+    config: example6,
+    component: Example6,
+    productComponent: Example6ProductPage,
+  },
 };
