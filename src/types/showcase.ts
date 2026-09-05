@@ -1,5 +1,22 @@
-export type ThemeTokens = { background: string; surface: string; text: string; muted: string; primary: string };
-export type Product = { number: number; category: string; name: string; variant: string; description: string; price: number; unit: string; photoUrls: string[]; stockOut: boolean; hide: boolean };
+export type ThemeTokens = {
+  background: string;
+  surface: string;
+  text: string;
+  muted: string;
+  primary: string;
+};
+export type Product = {
+  number: number;
+  category: string;
+  name: string;
+  variant: string;
+  description: string;
+  price: number;
+  unit: string;
+  photoUrls: string[];
+  stockOut: boolean;
+  hide: boolean;
+};
 export type ShowcaseConfig = {
   slug: string;
   title?: string;
@@ -23,8 +40,19 @@ export type ShowcaseConfig = {
   lazada?: string;
   others?: string[];
   owner: { name: string; handle: string };
-  showcase: { title: string; category: string; description: string; badge: string };
-  hero: { eyebrow: string; title: string; description: string; primaryAction: string; secondaryAction: string };
+  showcase: {
+    title: string;
+    category: string;
+    description: string;
+    badge: string;
+  };
+  hero: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    primaryAction: string;
+    secondaryAction: string;
+  };
   products: Product[];
   theme: { light: ThemeTokens; dark: ThemeTokens };
 };

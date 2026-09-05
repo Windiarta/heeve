@@ -1,1 +1,166 @@
-.canva-page{background:var(--bg);color:var(--text);font-family:'Canva Sans','DM Sans',sans-serif;min-height:100vh}.canva-hero{position:relative;overflow:hidden;min-height:620px;padding:0 clamp(24px,7vw,96px);background:linear-gradient(125deg,var(--primary),#00d9d9 115%);color:#fff}.canva-hero:after{content:'';position:absolute;width:420px;height:420px;right:8%;bottom:-180px;border-radius:50%;background:#ffffff26}.canva-hero nav{position:relative;z-index:1;height:76px;display:flex;justify-content:space-between;align-items:center}.canva-hero nav button{border:0;background:none;color:#fff}.canva-logo{font-size:22px;font-weight:700}.canva-hero-copy{position:relative;z-index:1;max-width:720px;padding:120px 0}.canva-hero-copy>p:not(.eyebrow){max-width:560px}.canva-hero h1{font-size:clamp(48px,8vw,88px);line-height:1.05;letter-spacing:-.04em}.canva-hero p:not(.eyebrow){font-size:18px;line-height:1.6;max-width:560px}.canva-primary{border:0;border-radius:12px;background:#fff;color:#8b3dff;padding:14px 24px;font-weight:700}.canva-collection{max-width:1280px;margin:auto;padding:96px clamp(24px,7vw,96px);background:var(--bg)}.canva-collection>header h2{font-size:clamp(32px,5vw,58px);line-height:1.05}.canva-collection>header{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px}.canva-collection h2{font-family:Georgia,serif;max-width:720px}.canva-link{border:0;background:none;color:var(--primary);text-decoration:underline}.masonry-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}.canva-masonry-item:nth-child(2){margin-top:56px}.canva-masonry-item:nth-child(3){margin-top:24px}.canva-masonry-item .showcase-product{border-radius:16px;background:var(--surface);border-color:color-mix(in srgb,var(--text) 10%,transparent);box-shadow:0 8px 24px #0002;padding:16px;min-width:0}.canva-masonry-item .showcase-product-art{aspect-ratio:1.15;height:auto;min-height:190px}.canva-masonry-item .showcase-product-copy h3{font-family:Georgia,serif;font-size:25px}.canva-masonry-item .showcase-product-art{border-radius:12px}.canva-masonry-item .whatsapp-cta{background:var(--primary);color:#fff}.canva-masonry-item .product-detail-link{border-radius:12px;border-color:var(--primary);color:var(--primary)}.canva-masonry-item .product-detail-link:hover{background:var(--primary);color:#fff}@media(max-width:800px){.canva-hero{padding:0 16px;min-height:600px}.canva-hero-copy{padding:92px 8px}.canva-hero h1{font-size:clamp(44px,13vw,68px)}.canva-collection{padding:64px 16px}.canva-collection>header{display:block}.canva-link{margin-top:16px}.masonry-grid{grid-template-columns:1fr}.canva-masonry-item:nth-child(n){margin-top:0}}
+.canva-page {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Canva Sans", "DM Sans", sans-serif;
+  min-height: 100vh;
+}
+.canva-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 620px;
+  padding: 0 clamp(24px, 7vw, 96px);
+  background: linear-gradient(125deg, var(--primary), #00d9d9 115%);
+  color: #fff;
+}
+.canva-hero:after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: 8%;
+  bottom: -180px;
+  border-radius: 50%;
+  background: #ffffff26;
+}
+.canva-hero nav {
+  position: relative;
+  z-index: 1;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.canva-hero nav button {
+  border: 0;
+  background: none;
+  color: #fff;
+}
+.canva-logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+.canva-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  padding: 120px 0;
+}
+.canva-hero-copy > p:not(.eyebrow) {
+  max-width: 560px;
+}
+.canva-hero h1 {
+  font-size: clamp(48px, 8vw, 88px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+.canva-hero p:not(.eyebrow) {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 560px;
+}
+.canva-primary {
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+  color: #8b3dff;
+  padding: 14px 24px;
+  font-weight: 700;
+}
+.canva-collection {
+  max-width: 1280px;
+  margin: auto;
+  padding: 96px clamp(24px, 7vw, 96px);
+  background: var(--bg);
+}
+.canva-collection > header h2 {
+  font-size: clamp(32px, 5vw, 58px);
+  line-height: 1.05;
+}
+.canva-collection > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 40px;
+}
+.canva-collection h2 {
+  font-family: Georgia, serif;
+  max-width: 720px;
+}
+.canva-link {
+  border: 0;
+  background: none;
+  color: var(--primary);
+  text-decoration: underline;
+}
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.canva-masonry-item:nth-child(2) {
+  margin-top: 56px;
+}
+.canva-masonry-item:nth-child(3) {
+  margin-top: 24px;
+}
+.canva-masonry-item .showcase-product {
+  border-radius: 16px;
+  background: var(--surface);
+  border-color: color-mix(in srgb, var(--text) 10%, transparent);
+  box-shadow: 0 8px 24px #0002;
+  padding: 16px;
+  min-width: 0;
+}
+.canva-masonry-item .showcase-product-art {
+  aspect-ratio: 1.15;
+  height: auto;
+  min-height: 190px;
+}
+.canva-masonry-item .showcase-product-copy h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+.canva-masonry-item .showcase-product-art {
+  border-radius: 12px;
+}
+.canva-masonry-item .whatsapp-cta {
+  background: var(--primary);
+  color: #fff;
+}
+.canva-masonry-item .product-detail-link {
+  border-radius: 12px;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.canva-masonry-item .product-detail-link:hover {
+  background: var(--primary);
+  color: #fff;
+}
+@media (max-width: 800px) {
+  .canva-hero {
+    padding: 0 16px;
+    min-height: 600px;
+  }
+  .canva-hero-copy {
+    padding: 92px 8px;
+  }
+  .canva-hero h1 {
+    font-size: clamp(44px, 13vw, 68px);
+  }
+  .canva-collection {
+    padding: 64px 16px;
+  }
+  .canva-collection > header {
+    display: block;
+  }
+  .canva-link {
+    margin-top: 16px;
+  }
+  .masonry-grid {
+    grid-template-columns: 1fr;
+  }
+  .canva-masonry-item:nth-child(n) {
+    margin-top: 0;
+  }
+}

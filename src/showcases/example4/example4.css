@@ -1,1 +1,210 @@
-.uber-page{background:var(--bg);color:var(--text);font-family:'UberMove','DM Sans',sans-serif;min-height:100vh}.uber-hero{background:var(--bg);padding:0 clamp(24px,7vw,96px);overflow:hidden}.uber-nav{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid color-mix(in srgb,var(--text) 15%,transparent)}.uber-logo,.uber-contact,.uber-link{border:0;background:none;color:var(--text);font-weight:700}.uber-logo{font-size:22px}.uber-hero-grid{max-width:1200px;margin:auto;min-height:620px;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:100px;align-items:center}.uber-hero-grid>div:first-child{min-width:0}.uber-hero h1{font-size:clamp(52px,8vw,96px);line-height:1.05;letter-spacing:-.04em;max-width:700px}.uber-hero p:not(.eyebrow){max-width:540px;color:var(--muted);font-size:20px;line-height:1.5}.uber-primary{border:0;border-radius:999px;background:var(--text);color:var(--bg);padding:14px 22px;font-weight:700}.watch-face{width:310px;height:310px;border:18px solid var(--text);border-radius:50%;display:grid;place-items:center;align-content:center;gap:8px;background:var(--surface);box-shadow:0 25px 60px #0003}.watch-face strong{font-size:24px;letter-spacing:-.04em;text-align:center}.watch-face span,.watch-face small{font:12px 'DM Mono';color:var(--primary);text-transform:uppercase}.watch-hands{position:relative;width:110px;height:110px;border:2px solid var(--text);border-radius:50%;background:radial-gradient(circle,var(--primary) 0 5px,transparent 6px)}.watch-hands:before,.watch-hands:after{content:'';position:absolute;left:50%;top:50%;width:2px;background:var(--text);transform-origin:top;border-radius:2px}.watch-hands:before{height:36px;transform:translate(-50%,-2px) rotate(25deg)}.watch-hands:after{height:28px;transform:translate(-50%,-2px) rotate(150deg)}.watch-hands i,.watch-hands b{position:absolute;inset:7px;border-top:1px solid color-mix(in srgb,var(--text) 30%,transparent);border-radius:50%}.watch-hands b{inset:15px;border-top:1px solid color-mix(in srgb,var(--text) 20%,transparent);transform:rotate(90deg)}.uber-catalog{max-width:1280px;margin:auto;padding:96px clamp(24px,7vw,96px);background:var(--bg)}.uber-catalog>header{display:flex;justify-content:space-between;align-items:end;margin-bottom:36px}.uber-catalog h2{max-width:720px}.uber-link{color:var(--primary);text-decoration:underline}.uber-catalog .showcase-catalog-grid.editorial{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.uber-catalog .showcase-product{border-radius:18px;background:var(--surface);border-color:color-mix(in srgb,var(--text) 14%,transparent);box-shadow:0 8px 24px #0002;min-width:0}.uber-catalog .showcase-product-art{aspect-ratio:1.2;height:auto;min-height:190px}.uber-catalog .showcase-product-art{border-radius:12px}.uber-catalog .whatsapp-cta{background:var(--text);color:var(--bg)}.uber-catalog .product-detail-link{border-radius:999px;border-color:var(--text)}@media(max-width:800px){.uber-hero{padding:0 16px}.uber-nav{height:64px}.uber-hero-grid{grid-template-columns:1fr;gap:48px;padding:72px 8px 90px;min-height:0}.uber-hero h1{font-size:clamp(48px,14vw,72px)}.uber-hero p:not(.eyebrow){font-size:16px}.watch-face{width:230px;height:230px;border-width:12px;margin:auto}.watch-face strong{font-size:42px}.uber-catalog{padding:64px 16px}.uber-catalog>header{display:block}.uber-catalog .uber-link{margin-top:16px}.uber-catalog .showcase-catalog-grid.editorial{grid-template-columns:1fr}}
+.uber-page {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "UberMove", "DM Sans", sans-serif;
+  min-height: 100vh;
+}
+.uber-hero {
+  background: var(--bg);
+  padding: 0 clamp(24px, 7vw, 96px);
+  overflow: hidden;
+}
+.uber-nav {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 15%, transparent);
+}
+.uber-logo,
+.uber-contact,
+.uber-link {
+  border: 0;
+  background: none;
+  color: var(--text);
+  font-weight: 700;
+}
+.uber-logo {
+  font-size: 22px;
+}
+.uber-hero-grid {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 620px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 100px;
+  align-items: center;
+}
+.uber-hero-grid > div:first-child {
+  min-width: 0;
+}
+.uber-hero h1 {
+  font-size: clamp(52px, 8vw, 96px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  max-width: 700px;
+}
+.uber-hero p:not(.eyebrow) {
+  max-width: 540px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.5;
+}
+.uber-primary {
+  border: 0;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--bg);
+  padding: 14px 22px;
+  font-weight: 700;
+}
+.watch-face {
+  width: 310px;
+  height: 310px;
+  border: 18px solid var(--text);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  background: var(--surface);
+  box-shadow: 0 25px 60px #0003;
+}
+.watch-face strong {
+  font-size: 24px;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+.watch-face span,
+.watch-face small {
+  font: 12px "DM Mono";
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.watch-hands {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border: 2px solid var(--text);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary) 0 5px, transparent 6px);
+}
+.watch-hands:before,
+.watch-hands:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  background: var(--text);
+  transform-origin: top;
+  border-radius: 2px;
+}
+.watch-hands:before {
+  height: 36px;
+  transform: translate(-50%, -2px) rotate(25deg);
+}
+.watch-hands:after {
+  height: 28px;
+  transform: translate(-50%, -2px) rotate(150deg);
+}
+.watch-hands i,
+.watch-hands b {
+  position: absolute;
+  inset: 7px;
+  border-top: 1px solid color-mix(in srgb, var(--text) 30%, transparent);
+  border-radius: 50%;
+}
+.watch-hands b {
+  inset: 15px;
+  border-top: 1px solid color-mix(in srgb, var(--text) 20%, transparent);
+  transform: rotate(90deg);
+}
+.uber-catalog {
+  max-width: 1280px;
+  margin: auto;
+  padding: 96px clamp(24px, 7vw, 96px);
+  background: var(--bg);
+}
+.uber-catalog > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 36px;
+}
+.uber-catalog h2 {
+  max-width: 720px;
+}
+.uber-link {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.uber-catalog .showcase-catalog-grid.editorial {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.uber-catalog .showcase-product {
+  border-radius: 18px;
+  background: var(--surface);
+  border-color: color-mix(in srgb, var(--text) 14%, transparent);
+  box-shadow: 0 8px 24px #0002;
+  min-width: 0;
+}
+.uber-catalog .showcase-product-art {
+  aspect-ratio: 1.2;
+  height: auto;
+  min-height: 190px;
+}
+.uber-catalog .showcase-product-art {
+  border-radius: 12px;
+}
+.uber-catalog .whatsapp-cta {
+  background: var(--text);
+  color: var(--bg);
+}
+.uber-catalog .product-detail-link {
+  border-radius: 999px;
+  border-color: var(--text);
+}
+@media (max-width: 800px) {
+  .uber-hero {
+    padding: 0 16px;
+  }
+  .uber-nav {
+    height: 64px;
+  }
+  .uber-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 72px 8px 90px;
+    min-height: 0;
+  }
+  .uber-hero h1 {
+    font-size: clamp(48px, 14vw, 72px);
+  }
+  .uber-hero p:not(.eyebrow) {
+    font-size: 16px;
+  }
+  .watch-face {
+    width: 230px;
+    height: 230px;
+    border-width: 12px;
+    margin: auto;
+  }
+  .watch-face strong {
+    font-size: 42px;
+  }
+  .uber-catalog {
+    padding: 64px 16px;
+  }
+  .uber-catalog > header {
+    display: block;
+  }
+  .uber-catalog .uber-link {
+    margin-top: 16px;
+  }
+  .uber-catalog .showcase-catalog-grid.editorial {
+    grid-template-columns: 1fr;
+  }
+}

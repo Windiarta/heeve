@@ -1,5 +1,71 @@
-import { useMemo, useState } from 'react';
-import type { Product } from '../types/showcase';
-import { AnimatedContent } from './react-bits/AnimatedContent';
-import { ShowcaseProductCard } from './ShowcaseProductCard';
-export function ShowcaseCatalog({ products, slug, navigate, whatsapp, purchaseLabel, detailLabel, variant }: { products: Product[]; slug: string; navigate: (path: string) => void; whatsapp: string | undefined; purchaseLabel?: string; detailLabel?: string; variant: 'editorial' | 'masonry' | 'circular' }) { const [category, setCategory] = useState(''); const visible = products.filter(product => !product.hide); const categories = useMemo(() => [...new Set(visible.map(product => product.category))], [visible]); const filtered = category ? visible.filter(product => product.category === category) : visible; return <div className={`showcase-catalog catalog-${variant}`}><div className="catalog-toolbar"><span className="catalog-count">{filtered.length}</span><div className="category-filter"><button className={!category ? 'active' : ''} onClick={() => setCategory('')}>⌘</button>{categories.map(item => <button className={category === item ? 'active' : ''} key={item} onClick={() => setCategory(item)}>{item}</button>)}</div></div><div className={`showcase-catalog-grid ${variant}`}>{filtered.map((product, index) => <AnimatedContent key={product.number}><ShowcaseProductCard product={product} index={index} slug={slug} navigate={navigate} whatsapp={whatsapp} purchaseLabel={purchaseLabel} detailLabel={detailLabel} variant={variant} /></AnimatedContent>)}</div></div>; }
+import { useMemo, useState } from "react";
+import type { Product } from "../types/showcase";
+import { AnimatedContent } from "./react-bits/AnimatedContent";
+import { ShowcaseProductCard } from "./ShowcaseProductCard";
+export function ShowcaseCatalog({
+  products,
+  slug,
+  navigate,
+  whatsapp,
+  purchaseLabel,
+  detailLabel,
+  variant,
+}: {
+  products: Product[];
+  slug: string;
+  navigate: (path: string) => void;
+  whatsapp: string | undefined;
+  purchaseLabel?: string;
+  detailLabel?: string;
+  variant: "editorial" | "masonry" | "circular";
+}) {
+  const [category, setCategory] = useState("");
+  const visible = products.filter((product) => !product.hide);
+  const categories = useMemo(
+    () => [...new Set(visible.map((product) => product.category))],
+    [visible],
+  );
+  const filtered = category
+    ? visible.filter((product) => product.category === category)
+    : visible;
+  return (
+    <div className={`showcase-catalog catalog-${variant}`}>
+      <div className="catalog-toolbar">
+        <span className="catalog-count">{filtered.length}</span>
+        <div className="category-filter">
+          <button
+            className={!category ? "active" : ""}
+            onClick={() => setCategory("")}
+          >
+            ⌘
+          </button>
+          {categories.map((item) => (
+            <button
+              className={category === item ? "active" : ""}
+              key={item}
+              onClick={() => setCategory(item)}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className={`showcase-catalog-grid ${variant}`}>
+        {filtered.map((product, index) => (
+          <AnimatedContent key={product.number}>
+            <ShowcaseProductCard
+              product={product}
+              index={index}
+              slug={slug}
+              navigate={navigate}
+              whatsapp={whatsapp}
+              purchaseLabel={purchaseLabel}
+              detailLabel={detailLabel}
+              variant={variant}
+            />
+          </AnimatedContent>
+        ))}
+      </div>
+    </div>
+  );
+}

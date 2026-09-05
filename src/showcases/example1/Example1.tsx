@@ -1,11 +1,118 @@
-import config from './config.json';
-import './example1.css';
-import { Aurora } from '../../components/react-bits/Aurora';
-import { BlurText } from '../../components/react-bits/BlurText';
-import { ShowcaseCatalog } from '../../components/ShowcaseCatalog';
-import { ShowcaseInfo } from '../../components/ShowcaseInfo';
-import type { ShowcaseConfig } from '../../types/showcase';
-import { useTheme } from '../../hooks/useTheme';
-import { useState } from 'react';
+import config from "./config.json";
+import "./example1.css";
+import { Aurora } from "../../components/react-bits/Aurora";
+import { BlurText } from "../../components/react-bits/BlurText";
+import { ShowcaseCatalog } from "../../components/ShowcaseCatalog";
+import { ShowcaseInfo } from "../../components/ShowcaseInfo";
+import type { ShowcaseConfig } from "../../types/showcase";
+import { useTheme } from "../../hooks/useTheme";
+import { useState } from "react";
 const data = config as ShowcaseConfig;
-export default function Example1({ navigate }: { navigate: (path: string) => void }) { const { theme } = useTheme(); const [menuOpen, setMenuOpen] = useState(false); const tokens = data.theme[theme]; const scrollTo = (id: string) => { document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); setMenuOpen(false); }; return <main className="store spotify-page" style={{ '--bg': tokens.background, '--surface': tokens.surface, '--text': tokens.text, '--muted': tokens.muted, '--primary': tokens.primary } as React.CSSProperties}><aside className={`spotify-sidebar ${menuOpen ? 'is-open' : ''}`}><div className="spotify-sidebar-head"><button className="spotify-brand" onClick={() => navigate('/')}>{data.title || data.showcase.title}</button><button className="spotify-menu-toggle" onClick={() => setMenuOpen(value => !value)} aria-expanded={menuOpen} aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? '×' : '☰'}</button></div><nav><button className="spotify-nav-active" onClick={() => scrollTo('overview')}>Overview</button><button onClick={() => scrollTo('catalog')}>Products</button><button onClick={() => scrollTo('contact')}>Purchase</button><button onClick={() => scrollTo('about')}>About</button></nav></aside><div className="spotify-content"><section className="spotify-hero" id="overview"><Aurora /><div className="spotify-hero-copy"><p className="eyebrow">{data.hero.eyebrow}</p><h1><BlurText>{data.headline || data.title || data.showcase.title}</BlurText></h1><p>{data.content || data.subtitle || data.showcase.description}</p><button className="spotify-play" onClick={() => document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' })}>▶ {data.hero.primaryAction}</button></div><div className="spotify-disc"><span>{data.showcase.badge}</span><strong>{data.title || data.showcase.title}</strong></div></section><section className="spotify-release" id="catalog"><header><div><p className="eyebrow">{data.showcase.category}</p><h2>{data.subtitle || data.showcase.description}</h2></div><button className="spotify-link" onClick={() => document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' })}>{data.hero.secondaryAction} ↗</button></header><ShowcaseCatalog products={data.products} slug={data.slug} navigate={navigate} whatsapp={data.contactPersonWhatsapp} variant="editorial" /></section><ShowcaseInfo config={data} /></div></main>; }
+export default function Example1({
+  navigate,
+}: {
+  navigate: (path: string) => void;
+}) {
+  const { theme } = useTheme();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const tokens = data.theme[theme];
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false);
+  };
+  return (
+    <main
+      className="store spotify-page"
+      style={
+        {
+          "--bg": tokens.background,
+          "--surface": tokens.surface,
+          "--text": tokens.text,
+          "--muted": tokens.muted,
+          "--primary": tokens.primary,
+        } as React.CSSProperties
+      }
+    >
+      <aside className={`spotify-sidebar ${menuOpen ? "is-open" : ""}`}>
+        <div className="spotify-sidebar-head">
+          <button className="spotify-brand" onClick={() => navigate("/")}>
+            {data.title || data.showcase.title}
+          </button>
+          <button
+            className="spotify-menu-toggle"
+            onClick={() => setMenuOpen((value) => !value)}
+            aria-expanded={menuOpen}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+          >
+            {menuOpen ? "×" : "☰"}
+          </button>
+        </div>
+        <nav>
+          <button
+            className="spotify-nav-active"
+            onClick={() => scrollTo("overview")}
+          >
+            Overview
+          </button>
+          <button onClick={() => scrollTo("catalog")}>Products</button>
+          <button onClick={() => scrollTo("contact")}>Purchase</button>
+          <button onClick={() => scrollTo("about")}>About</button>
+        </nav>
+      </aside>
+      <div className="spotify-content">
+        <section className="spotify-hero" id="overview">
+          <Aurora />
+          <div className="spotify-hero-copy">
+            <p className="eyebrow">{data.hero.eyebrow}</p>
+            <h1>
+              <BlurText>
+                {data.headline || data.title || data.showcase.title}
+              </BlurText>
+            </h1>
+            <p>{data.content || data.subtitle || data.showcase.description}</p>
+            <button
+              className="spotify-play"
+              onClick={() =>
+                document
+                  .getElementById("catalog")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              ▶ {data.hero.primaryAction}
+            </button>
+          </div>
+          <div className="spotify-disc">
+            <span>{data.showcase.badge}</span>
+            <strong>{data.title || data.showcase.title}</strong>
+          </div>
+        </section>
+        <section className="spotify-release" id="catalog">
+          <header>
+            <div>
+              <p className="eyebrow">{data.showcase.category}</p>
+              <h2>{data.subtitle || data.showcase.description}</h2>
+            </div>
+            <button
+              className="spotify-link"
+              onClick={() =>
+                document
+                  .getElementById("catalog")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {data.hero.secondaryAction} ↗
+            </button>
+          </header>
+          <ShowcaseCatalog
+            products={data.products}
+            slug={data.slug}
+            navigate={navigate}
+            whatsapp={data.contactPersonWhatsapp}
+            variant="editorial"
+          />
+        </section>
+        <ShowcaseInfo config={data} />
+      </div>
+    </main>
+  );
+}

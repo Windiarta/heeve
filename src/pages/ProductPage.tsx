@@ -1,7 +1,79 @@
-import type { Product, ShowcaseConfig } from '../types/showcase';
+import type { Product, ShowcaseConfig } from "../types/showcase";
 
-export function ProductPage({ config, product, navigate }: { config: ShowcaseConfig; product: Product; navigate: (path: string) => void }) {
-  const contact = config.contactPersonWhatsapp ? `https://wa.me/${config.contactPersonWhatsapp}` : config.contactPersonEmail ? `mailto:${config.contactPersonEmail}` : config.companyEmail ? `mailto:${config.companyEmail}` : '';
+export function ProductPage({
+  config,
+  product,
+  navigate,
+}: {
+  config: ShowcaseConfig;
+  product: Product;
+  navigate: (path: string) => void;
+}) {
+  const contact = config.contactPersonWhatsapp
+    ? `https://wa.me/${config.contactPersonWhatsapp}`
+    : config.contactPersonEmail
+      ? `mailto:${config.contactPersonEmail}`
+      : config.companyEmail
+        ? `mailto:${config.companyEmail}`
+        : "";
   const photos = product.photoUrls.filter(Boolean);
-  return <main className="product-page"><button className="back-button" onClick={() => navigate(`/showcase/${config.slug}`)} aria-label={config.title ?? config.showcase.title}>←</button><div className="product-detail"><div className="detail-gallery">{photos.length ? photos.map((photo, index) => <img key={photo} src={photo} alt={`${product.name} ${index + 1}`} />) : <div className="detail-art" style={{ background: `linear-gradient(135deg, ${config.theme.light.primary}, var(--bg))` }}><span>{String(product.number).padStart(2, '0')}</span></div>}</div><div className="detail-copy"><p className="eyebrow">{product.category} · {product.unit}</p><h1>{product.name}</h1>{product.variant && <p className="product-variant">{product.variant}</p>}<p className="detail-description">{product.description}</p><strong className="detail-price">Rp {product.price.toLocaleString('id-ID')} / {product.unit}</strong><p className={`availability ${product.stockOut ? 'sold-out' : ''}`}>{product.stockOut ? '×' : '✓'}</p>{contact && !product.stockOut && <a className="primary-button contact-action" href={contact} target="_blank" rel="noreferrer">{config.contactPersonName ?? config.companyEmail}</a>}</div></div></main>;
+  return (
+    <main className="product-page">
+      <button
+        className="back-button"
+        onClick={() => navigate(`/showcase/${config.slug}`)}
+        aria-label={config.title ?? config.showcase.title}
+      >
+        ←
+      </button>
+      <div className="product-detail">
+        <div className="detail-gallery">
+          {photos.length ? (
+            photos.map((photo, index) => (
+              <img
+                key={photo}
+                src={photo}
+                alt={`${product.name} ${index + 1}`}
+              />
+            ))
+          ) : (
+            <div
+              className="detail-art"
+              style={{
+                background: `linear-gradient(135deg, ${config.theme.light.primary}, var(--bg))`,
+              }}
+            >
+              <span>{String(product.number).padStart(2, "0")}</span>
+            </div>
+          )}
+        </div>
+        <div className="detail-copy">
+          <p className="eyebrow">
+            {product.category} · {product.unit}
+          </p>
+          <h1>{product.name}</h1>
+          {product.variant && (
+            <p className="product-variant">{product.variant}</p>
+          )}
+          <p className="detail-description">{product.description}</p>
+          <strong className="detail-price">
+            Rp {product.price.toLocaleString("id-ID")} / {product.unit}
+          </strong>
+          <p className={`availability ${product.stockOut ? "sold-out" : ""}`}>
+            {product.stockOut ? "×" : "✓"}
+          </p>
+          {contact && !product.stockOut && (
+            <a
+              className="primary-button contact-action"
+              href={contact}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {config.contactPersonName ?? config.companyEmail}
+            </a>
+          )}
+        </div>
+      </div>
+    </main>
+  );
 }

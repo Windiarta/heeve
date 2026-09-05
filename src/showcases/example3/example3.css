@@ -1,2 +1,206 @@
 /* Stripe-inspired: airy fintech layout, diagonal gradient, split hero, floating product panel. */
-.stripe-page{font-family:'sohne-var','DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}.stripe-hero{position:relative;overflow:hidden;min-height:680px;padding:0 clamp(24px,6vw,90px);background:var(--bg)}.stripe-gradient{position:absolute;inset:-30% -10% 20% 25%;background:linear-gradient(120deg,#635bff,#00d4ff 45%,#ff80b5 80%);filter:blur(60px);opacity:.48;transform:skewY(-8deg)}.stripe-nav{position:relative;z-index:1;height:76px;display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:auto}.stripe-nav button{border:0;background:none;color:var(--text)}.stripe-logo{font-size:21px;font-weight:700}.stripe-hero-grid{position:relative;z-index:1;max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 390px;gap:80px;align-items:center;padding:110px 0}.stripe-hero-copy h1{font-size:clamp(48px,7vw,82px);font-weight:300;letter-spacing:-.04em;max-width:720px}.stripe-hero-copy>p:not(.eyebrow){max-width:550px;color:var(--muted);font-size:18px;line-height:1.6}.stripe-cta{background:var(--primary);color:var(--bg);border:0;border-radius:8px;padding:14px 24px;min-height:44px;font-weight:600;transition:filter .2s}.stripe-cta:hover{filter:brightness(1.12)}.stripe-preview{display:grid;gap:24px;padding:36px;background:var(--surface);border:1px solid color-mix(in srgb,var(--text) 14%,transparent);border-radius:12px;box-shadow:0 30px 60px #0003;transform:rotate(4deg)}.stripe-preview span{color:var(--primary);font-size:12px}.stripe-preview strong{font-size:42px;font-weight:500;letter-spacing:-.06em}.stripe-preview small{color:var(--muted);border-top:1px solid color-mix(in srgb,var(--text) 14%,transparent);padding-top:18px}.stripe-toolkit{max-width:1280px;margin:auto;padding:90px clamp(24px,6vw,90px);background:var(--bg)}.stripe-toolkit h2{font-size:36px;font-weight:500;max-width:680px}.stripe-link{border:0;background:none;color:var(--primary);text-decoration:underline}.stripe-toolkit .showcase-catalog-grid.circular{grid-template-columns:repeat(3,1fr);gap:24px}.stripe-toolkit .showcase-product{background:var(--surface);border:1px solid color-mix(in srgb,var(--text) 14%,transparent);border-radius:8px;padding:24px;box-shadow:0 13px 27px #0002;transition:transform .2s,box-shadow .2s}.stripe-toolkit .showcase-product:hover{transform:translateY(-4px);box-shadow:0 16px 34px #0004}.stripe-toolkit .showcase-product-art{border-radius:8px;background:linear-gradient(135deg,var(--accent),#0a2540)}.stripe-toolkit .showcase-product-copy p,.stripe-toolkit .showcase-product-copy small{color:var(--muted)}.stripe-toolkit .showcase-product-copy strong{color:var(--primary)}.stripe-toolkit .category-filter button{border-radius:6px;border-color:color-mix(in srgb,var(--text) 18%,transparent)}.stripe-toolkit .category-filter button.active{background:var(--primary);border-color:var(--primary);color:var(--bg)}.stripe-toolkit .whatsapp-cta{background:var(--primary);color:var(--bg)}.stripe-toolkit .product-detail-link{border-color:var(--primary);color:var(--primary)}.stripe-toolkit .product-detail-link:hover{background:var(--primary);color:var(--bg)}@media(max-width:800px){.spotify-page{display:block}.spotify-sidebar{position:relative;width:auto;height:auto}.spotify-sidebar nav{margin-top:20px}.spotify-disc{display:none}.netlify-terminal{position:relative;right:auto;bottom:auto;margin-top:50px}.netlify-section-title{display:block}.netlify-section-title .netlify-link{margin-top:18px}.stripe-hero-grid{grid-template-columns:1fr;padding:70px 0}.stripe-preview{transform:none}.stripe-toolkit .showcase-catalog-grid.circular{grid-template-columns:1fr}}
+.stripe-page {
+  font-family: "sohne-var", "DM Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+.stripe-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 680px;
+  padding: 0 clamp(24px, 6vw, 90px);
+  background: var(--bg);
+}
+.stripe-gradient {
+  position: absolute;
+  inset: -30% -10% 20% 25%;
+  background: linear-gradient(120deg, #635bff, #00d4ff 45%, #ff80b5 80%);
+  filter: blur(60px);
+  opacity: 0.48;
+  transform: skewY(-8deg);
+}
+.stripe-nav {
+  position: relative;
+  z-index: 1;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: auto;
+}
+.stripe-nav button {
+  border: 0;
+  background: none;
+  color: var(--text);
+}
+.stripe-logo {
+  font-size: 21px;
+  font-weight: 700;
+}
+.stripe-hero-grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  gap: 80px;
+  align-items: center;
+  padding: 110px 0;
+}
+.stripe-hero-copy h1 {
+  font-size: clamp(48px, 7vw, 82px);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  max-width: 720px;
+}
+.stripe-hero-copy > p:not(.eyebrow) {
+  max-width: 550px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+.stripe-cta {
+  background: var(--primary);
+  color: var(--bg);
+  border: 0;
+  border-radius: 8px;
+  padding: 14px 24px;
+  min-height: 44px;
+  font-weight: 600;
+  transition: filter 0.2s;
+}
+.stripe-cta:hover {
+  filter: brightness(1.12);
+}
+.stripe-preview {
+  display: grid;
+  gap: 24px;
+  padding: 36px;
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: 12px;
+  box-shadow: 0 30px 60px #0003;
+  transform: rotate(4deg);
+}
+.stripe-preview span {
+  color: var(--primary);
+  font-size: 12px;
+}
+.stripe-preview strong {
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+.stripe-preview small {
+  color: var(--muted);
+  border-top: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  padding-top: 18px;
+}
+.stripe-toolkit {
+  max-width: 1280px;
+  margin: auto;
+  padding: 90px clamp(24px, 6vw, 90px);
+  background: var(--bg);
+}
+.stripe-toolkit h2 {
+  font-size: 36px;
+  font-weight: 500;
+  max-width: 680px;
+}
+.stripe-link {
+  border: 0;
+  background: none;
+  color: var(--primary);
+  text-decoration: underline;
+}
+.stripe-toolkit .showcase-catalog-grid.circular {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.stripe-toolkit .showcase-product {
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 13px 27px #0002;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.stripe-toolkit .showcase-product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px #0004;
+}
+.stripe-toolkit .showcase-product-art {
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), #0a2540);
+}
+.stripe-toolkit .showcase-product-copy p,
+.stripe-toolkit .showcase-product-copy small {
+  color: var(--muted);
+}
+.stripe-toolkit .showcase-product-copy strong {
+  color: var(--primary);
+}
+.stripe-toolkit .category-filter button {
+  border-radius: 6px;
+  border-color: color-mix(in srgb, var(--text) 18%, transparent);
+}
+.stripe-toolkit .category-filter button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg);
+}
+.stripe-toolkit .whatsapp-cta {
+  background: var(--primary);
+  color: var(--bg);
+}
+.stripe-toolkit .product-detail-link {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.stripe-toolkit .product-detail-link:hover {
+  background: var(--primary);
+  color: var(--bg);
+}
+@media (max-width: 800px) {
+  .spotify-page {
+    display: block;
+  }
+  .spotify-sidebar {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+  .spotify-sidebar nav {
+    margin-top: 20px;
+  }
+  .spotify-disc {
+    display: none;
+  }
+  .netlify-terminal {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 50px;
+  }
+  .netlify-section-title {
+    display: block;
+  }
+  .netlify-section-title .netlify-link {
+    margin-top: 18px;
+  }
+  .stripe-hero-grid {
+    grid-template-columns: 1fr;
+    padding: 70px 0;
+  }
+  .stripe-preview {
+    transform: none;
+  }
+  .stripe-toolkit .showcase-catalog-grid.circular {
+    grid-template-columns: 1fr;
+  }
+}
