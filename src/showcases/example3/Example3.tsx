@@ -1,6 +1,8 @@
 import config from "./config.json";
 import "./example3.css";
 import { BlurText } from "../../components/react-bits/BlurText";
+import Hyperspeed from "../../components/react-bits/Hyperspeed";
+import { hyperspeedPresets } from "../../components/react-bits/HyperSpeedPresets";
 import { ShowcaseCatalog } from "../../components/ShowcaseCatalog";
 import { ShowcaseInfo } from "../../components/ShowcaseInfo";
 import type { ShowcaseConfig } from "../../types/showcase";
@@ -27,7 +29,14 @@ export default function Example3({
       }
     >
       <section className="stripe-hero">
-        <div className="stripe-gradient" />
+        <Hyperspeed
+          lightMode={theme === "light"}
+          effectOptions={
+            hyperspeedPresets.one as unknown as Parameters<
+              typeof Hyperspeed
+            >[0]["effectOptions"]
+          }
+        />
         <nav className="stripe-nav">
           <button onClick={() => navigate("/")} className="stripe-logo">
             {data.title || data.showcase.title}
@@ -62,13 +71,6 @@ export default function Example3({
               {data.hero.primaryAction} ↗
             </button>
           </div>
-          <div className="stripe-preview">
-            <span>{data.showcase.badge}</span>
-            <strong>{data.title || data.showcase.title}</strong>
-            <small>
-              {data.companyEmail || data.companyPhone || data.owner.handle}
-            </small>
-          </div>
         </div>
       </section>
       <section className="stripe-toolkit" id="catalog">
@@ -94,6 +96,9 @@ export default function Example3({
           navigate={navigate}
           whatsapp={data.contactPersonWhatsapp}
           variant="circular"
+          purchaseLabel="Get game"
+          detailLabel="View game"
+          countLabel="Games"
         />
       </section>
       <ShowcaseInfo config={data} />

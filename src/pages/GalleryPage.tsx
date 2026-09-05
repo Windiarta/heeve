@@ -85,7 +85,6 @@ export function GalleryPage({
             </div>
           </div>
         </div>
-
       </section>
 
       <section className="gallery-section home-gallery" id="showcases">

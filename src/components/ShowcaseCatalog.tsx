@@ -11,6 +11,7 @@ export function ShowcaseCatalog({
   detailLabel,
   variant,
   searchEnabled = false,
+  countLabel = "Services",
 }: {
   products: Product[];
   slug: string;
@@ -20,6 +21,7 @@ export function ShowcaseCatalog({
   detailLabel?: string;
   variant: "editorial" | "masonry" | "circular";
   searchEnabled?: boolean;
+  countLabel?: string;
 }) {
   const [category, setCategory] = useState("");
   const [search, setSearch] = useState("");
@@ -41,7 +43,9 @@ export function ShowcaseCatalog({
   return (
     <div className={`showcase-catalog catalog-${variant}`}>
       <div className="catalog-toolbar">
-        <span className="catalog-count">{searched.length} Services</span>
+        <span className="catalog-count">
+          {searched.length} {countLabel}
+        </span>
         {searchEnabled && (
           <label className="catalog-search">
             <span>⌕</span>

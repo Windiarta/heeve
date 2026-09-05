@@ -47,9 +47,20 @@ void main() {
 }
 `;
 
-export default function Threads({ color = [0.2, 0.35, 0.8], amplitude = 1, distance = 0.7, enableMouseInteraction = true, className = "" }: ThreadsProps) {
+export default function Threads({
+  color = [0.2, 0.35, 0.8],
+  amplitude = 1,
+  distance = 0.7,
+  enableMouseInteraction = true,
+  className = "",
+}: ThreadsProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const propsRef = useRef({ color, amplitude, distance, enableMouseInteraction });
+  const propsRef = useRef({
+    color,
+    amplitude,
+    distance,
+    enableMouseInteraction,
+  });
 
   propsRef.current = { color, amplitude, distance, enableMouseInteraction };
 
@@ -82,7 +93,8 @@ export default function Threads({ color = [0.2, 0.35, 0.8], amplitude = 1, dista
       renderer.setSize(container.clientWidth, container.clientHeight);
       program.uniforms.iResolution.value.r = gl.canvas.width;
       program.uniforms.iResolution.value.g = gl.canvas.height;
-      program.uniforms.iResolution.value.b = gl.canvas.width / Math.max(gl.canvas.height, 1);
+      program.uniforms.iResolution.value.b =
+        gl.canvas.width / Math.max(gl.canvas.height, 1);
     };
     const move = (event: MouseEvent) => {
       const rect = container.getBoundingClientRect();
@@ -118,5 +130,11 @@ export default function Threads({ color = [0.2, 0.35, 0.8], amplitude = 1, dista
     };
   }, []);
 
-  return <div ref={containerRef} className={`threads-container ${className}`} aria-hidden="true" />;
+  return (
+    <div
+      ref={containerRef}
+      className={`threads-container ${className}`}
+      aria-hidden="true"
+    />
+  );
 }
