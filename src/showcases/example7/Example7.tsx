@@ -34,22 +34,22 @@ export default function Example7({
     (p) => p.category === categories[activeTab]
   );
 
-  // Hero carousel slides
+  // Hero carousel slides (watch-31, watch-32, watch-33 khusus hero section)
   const heroSlides = [
     {
-      img: data.products[0]?.photoUrls[0] || data.image,
+      img: "https://i.imgur.com/67KIUVt.jpeg", // watch-31
       subtitle: "Arlojihobi Curated Selection",
       title: "Vintage Chronographs",
       productNum: data.products[0]?.number,
     },
     {
-      img: data.products[2]?.photoUrls[0] || data.image,
+      img: "https://i.imgur.com/IcZmx0N.jpeg", // watch-32
       subtitle: "Heritage Collection",
       title: "Classic Automatics",
       productNum: data.products[2]?.number,
     },
     {
-      img: data.products[9]?.photoUrls[0] || data.image,
+      img: "https://i.imgur.com/KUcIad2.jpeg", // watch-33
       subtitle: "Collector Curated",
       title: "Prestige Timepieces",
       productNum: data.products[9]?.number,
@@ -346,18 +346,6 @@ export default function Example7({
             );
           })}
         </div>
-      </section>
-
-      {/* 9. Dark Hero: Designed to Win */}
-      <section className="ex7-title-section dark">
-        <span className="ex7-subheading" style={{ color: "#e74c3c" }}>
-          PASSION FOR HOROLOGY
-        </span>
-        <h2 className="ex7-heading">Mastering the Art of Vintage Timepieces</h2>
-        <p className="ex7-paragraph">
-          Vintage, modern, and everything in between. Carefully curated and
-          serviced timepieces for enthusiasts and collectors worldwide.
-        </p>
       </section>
 
       {/* 10. Quote Section */}

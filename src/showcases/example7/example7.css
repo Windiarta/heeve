@@ -43,6 +43,41 @@
   padding: 6px 8px;
 }
 
+@media (max-width: 640px) {
+  .ex7-header {
+    padding: 0 12px;
+    height: 52px;
+  }
+
+  .ex7-header-left,
+  .ex7-header-right {
+    gap: 4px;
+  }
+
+  .ex7-icon-btn {
+    padding: 6px;
+    gap: 0;
+  }
+
+  .ex7-icon-btn span {
+    display: none;
+  }
+
+  .ex7-brand-logo {
+    gap: 6px;
+  }
+
+  .ex7-brand-text {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .ex7-logo-img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 .ex7-brand-logo {
   display: flex;
   align-items: center;
