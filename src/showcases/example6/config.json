@@ -94,7 +94,7 @@
       "description": "Vespa klasik yang dipulihkan dengan pesona Italia dan detail orisinal.",
       "price": 65000000,
       "unit": "unit",
-      "photoUrls": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc-M0D6mExC7TyP5_4C_yLelAHpoB4gT1yhL0F_YJtT1FXtbAKsEv8Tjg&s=10"],
+      "photoUrls": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc-M0D6mExC7TyP5_4C_yLelAHpoB4gT1yhL0F_YJtT1FXtbAKsEv8Tjg&s=10","https://vespa.co.id/assets/img/the-empty-space/vespa.jpg", "https://vespa.co.id/assets/img/the-empty-space/vespa.jpg", "https://vespa.co.id/assets/img/the-empty-space/vespa.jpg", "https://vespa.co.id/assets/img/the-empty-space/vespa.jpg"],
       "stockOut": false,
       "hide": false
     },

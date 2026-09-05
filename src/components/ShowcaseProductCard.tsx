@@ -23,8 +23,20 @@ export function ShowcaseProductCard({
   const whatsappUrl = whatsapp
     ? `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`
     : `/showcase/${slug}/product/${product.number}`;
+  const openProduct = () => navigate(`/showcase/${slug}/product/${product.number}`);
   return (
-    <SpotlightCard className={`showcase-product showcase-product-${variant}`}>
+    <SpotlightCard
+      className={`showcase-product showcase-product-${variant}`}
+      onClick={openProduct}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openProduct();
+        }
+      }}
+      role="link"
+      tabIndex={0}
+    >
       <div
         className="showcase-product-art"
         style={
@@ -34,7 +46,24 @@ export function ShowcaseProductCard({
         }
       >
         {product.photoUrls[0] ? (
-          <img src={product.photoUrls[0]} alt={product.name} />
+          <img
+            src={product.photoUrls[0]}
+            alt={product.name}
+            onClick={(event) => {
+              event.stopPropagation();
+              openProduct();
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                event.stopPropagation();
+                openProduct();
+              }
+            }}
+            role="link"
+            tabIndex={0}
+            aria-label={`Open ${product.name}`}
+          />
         ) : (
           <>
             <b>{String(product.number).padStart(2, "0")}</b>
@@ -58,6 +87,7 @@ export function ShowcaseProductCard({
             <a
               className="whatsapp-cta"
               href={whatsappUrl}
+              onClick={(event) => event.stopPropagation()}
               target={whatsapp ? "_blank" : undefined}
               rel={whatsapp ? "noreferrer" : undefined}
               aria-label={`${purchaseLabel} ${product.name}`}
@@ -66,9 +96,10 @@ export function ShowcaseProductCard({
             </a>
             <button
               className="product-detail-link"
-              onClick={() =>
-                navigate(`/showcase/${slug}/product/${product.number}`)
-              }
+              onClick={(event) => {
+                event.stopPropagation();
+                openProduct();
+              }}
               aria-label={`${detailLabel} ${product.name}`}
             >
               {detailLabel} ↗

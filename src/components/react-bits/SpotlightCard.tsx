@@ -1,11 +1,11 @@
 export function SpotlightCard({
   children,
   className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+  ...props
+}: React.HTMLAttributes<HTMLElement>) {
   return (
-    <article className={`spotlight-card ${className}`}>{children}</article>
+    <article className={`spotlight-card ${className}`} {...props}>
+      {children}
+    </article>
   );
 }
