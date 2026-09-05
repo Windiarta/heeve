@@ -320,7 +320,7 @@ export default function Example7({
           <h2 className="ex7-heading">Featured Categories</h2>
         </div>
         <div className="ex7-collections-grid">
-          {categories.slice(0, 4).map((cat, idx) => {
+          {categories.slice(0, 3).map((cat, idx) => {
             const sample = data.products.find((p) => p.category === cat);
             return (
               <div
