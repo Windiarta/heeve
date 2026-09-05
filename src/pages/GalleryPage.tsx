@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
-import { Aurora } from "../components/react-bits/Aurora";
+
+import Threads from "../components/react-bits/Threads";
 import { BlurText } from "../components/react-bits/BlurText";
 import { AnimatedContent } from "../components/react-bits/AnimatedContent";
 import { ChromaGrid } from "../components/react-bits/ChromaGrid";
 import { SpotlightCard } from "../components/react-bits/SpotlightCard";
+
 import { showcaseRegistry } from "../showcases/registry";
 import type { ShowcaseConfig } from "../types/showcase";
 
@@ -13,6 +15,7 @@ export function GalleryPage({
   navigate: (path: string) => void;
 }) {
   const [category, setCategory] = useState("All");
+
   const entries = Object.entries(showcaseRegistry);
   const categories = useMemo(
     () => [
@@ -36,11 +39,17 @@ export function GalleryPage({
   return (
     <main className="home-page">
       <section className="hero home-hero">
-        <Aurora />
+        <Threads
+          color={[0.2, 0.35, 0.8]}
+          className="home-threads"
+          amplitude={0.9}
+          distance={0.65}
+          enableMouseInteraction
+        />
         <div className="hero-copy home-hero-copy">
           <p className="eyebrow">HEEVE / storefront gallery</p>
           <h1>
-            <BlurText>Make your shop impossible to scroll past.</BlurText>
+            <BlurText>Make your shop. Heeve!</BlurText>
           </h1>
           <p>
             Enam storefront siap jelajah. Enam arah visual berbeda untuk
@@ -76,15 +85,7 @@ export function GalleryPage({
             </div>
           </div>
         </div>
-        <div className="hero-orbit home-orbit" aria-hidden="true">
-          <span>scroll to explore</span>
-          <b>✦</b>
-          <small>
-            made for
-            <br />
-            first impressions
-          </small>
-        </div>
+
       </section>
 
       <section className="gallery-section home-gallery" id="showcases">
