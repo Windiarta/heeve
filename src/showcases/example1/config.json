@@ -1,1 +1,154 @@
-{"slug":"example1","title":"Echo Market","subtitle":"Merchandise musik independen.","companyAddress":"Jl. Melodi No. 12, Bandung","companyEmail":"hello@echomarket.example","companyPhone":"+62 22 555 0101","contactPersonName":"Nadia Putri","contactPersonEmail":"nadia@echomarket.example","contactPersonPhone":"+62 811 1000 2000","contactPersonWhatsapp":"6281110002000","headline":"","content":"Koleksi rilisan, pakaian, dan aksesori dari musisi independen.","image":"","instagram":"https://instagram.com/echomarket","facebook":"","twitterX":"https://x.com/echomarket","tokopedia":"","tiktok":"https://tiktok.com/@echomarket","shopee":"","lazada":"","others":[],"owner":{"name":"Nadia Putri","handle":"@nadiastore"},"showcase":{"title":"Echo Market","category":"Music merchandise","description":"Merchandise untuk pendengar dan kreator independen.","badge":"Featured"},"hero":{"eyebrow":"Independent sound, physical form","title":"","description":"Koleksi rilisan, pakaian, dan aksesori dari musisi independen.","primaryAction":"Belanja koleksi","secondaryAction":"Lihat rilisan"},"products":[{"number":1,"category":"Vinyl","name":"Midnight Sessions Vinyl","variant":"12-inch, black","description":"Album live edisi terbatas.","price":429000,"unit":"pcs","photoUrls":[],"stockOut":false,"hide":false},{"number":2,"category":"Apparel","name":"After Hours Tee","variant":"Black / M–XL","description":"Cotton heavyweight dengan artwork eksklusif.","price":299000,"unit":"pcs","photoUrls":[],"stockOut":false,"hide":false},{"number":3,"category":"Print","name":"Live Poster 2024","variant":"A2 matte","description":"Poster konser bernomor.","price":149000,"unit":"pcs","photoUrls":[],"stockOut":true,"hide":false},{"number":4,"category":"Accessory","name":"Echo Canvas Tote","variant":"Natural cotton","description":"Tas kanvas untuk membawa koleksi harian.","price":179000,"unit":"pcs","photoUrls":[],"stockOut":false,"hide":false}],"theme":{"light":{"background":"#f5f5f5","surface":"#ffffff","text":"#121212","muted":"#6a6a6a","primary":"#159447"},"dark":{"background":"#121212","surface":"#181818","text":"#ffffff","muted":"#b3b3b3","primary":"#1ed760"}}}
+{
+  "slug": "example1",
+  "title": "Echo Market",
+  "subtitle": "Merchandise musik independen.",
+  "companyAddress": "Jl. Melodi No. 12, Bandung",
+  "companyEmail": "hello@echomarket.example",
+  "companyPhone": "+62 22 555 0101",
+  "contactPersonName": "Nadia Putri",
+  "contactPersonEmail": "nadia@echomarket.example",
+  "contactPersonPhone": "+62 811 1000 2000",
+  "contactPersonWhatsapp": "6281110002000",
+  "headline": "",
+  "content": "Koleksi rilisan, pakaian, dan aksesori dari musisi independen.",
+  "image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=85",
+  "instagram": "https://instagram.com/echomarket",
+  "facebook": "",
+  "twitterX": "https://x.com/echomarket",
+  "tokopedia": "",
+  "tiktok": "https://tiktok.com/@echomarket",
+  "shopee": "",
+  "lazada": "",
+  "others": [],
+  "owner": {
+    "name": "Nadia Putri",
+    "handle": "@nadiastore"
+  },
+  "showcase": {
+    "title": "Echo Market",
+    "category": "Music merchandise",
+    "description": "Merchandise untuk pendengar dan kreator independen.",
+    "badge": "Featured"
+  },
+  "hero": {
+    "eyebrow": "Independent sound, physical form",
+    "title": "",
+    "description": "Koleksi rilisan, pakaian, dan aksesori dari musisi independen.",
+    "primaryAction": "Belanja koleksi",
+    "secondaryAction": "Lihat rilisan"
+  },
+  "products": [
+    {
+      "number": 1,
+      "category": "Vinyl",
+      "name": "Midnight Sessions Vinyl",
+      "variant": "12-inch, black",
+      "description": "Album live edisi terbatas dengan sleeve matte.",
+      "price": 429000,
+      "unit": "pcs",
+      "photoUrls": ["https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1461360228754-6e81c478b882?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1524650359799-842906ca1c06?auto=format&fit=crop&w=1200&q=85"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 2,
+      "category": "Apparel",
+      "name": "After Hours Tee",
+      "variant": "Black / M–XL",
+      "description": "Cotton heavyweight dengan artwork eksklusif.",
+      "price": 299000,
+      "unit": "pcs",
+      "photoUrls": ["https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=1200&q=85"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 3,
+      "category": "Print",
+      "name": "Live Poster 2024",
+      "variant": "A2 matte",
+      "description": "Poster konser bernomor untuk dinding studio atau kamar.",
+      "price": 149000,
+      "unit": "pcs",
+      "photoUrls": ["https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=1200&q=85"],
+      "stockOut": true,
+      "hide": false
+    },
+    {
+      "number": 4,
+      "category": "Accessory",
+      "name": "Echo Canvas Tote",
+      "variant": "Natural cotton",
+      "description": "Tas kanvas untuk membawa koleksi harian.",
+      "price": 179000,
+      "unit": "pcs",
+      "photoUrls": ["https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1200&q=85"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 5,
+      "category": "Cassette",
+      "name": "Static Bloom Cassette",
+      "variant": "Limited cobalt edition",
+      "description": "Rilisan kaset terbatas dengan insert lirik dan artwork dua sisi.",
+      "price": 189000,
+      "unit": "pcs",
+      "photoUrls": ["https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1524650359799-842906ca1c06?auto=format&fit=crop&w=1200&q=85"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 6,
+      "category": "Headwear",
+      "name": "Signal Cap",
+      "variant": "Washed black / one size",
+      "description": "Topi six-panel dengan bordir logo Echo Market.",
+      "price": 219000,
+      "unit": "pcs",
+      "photoUrls": ["https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?auto=format&fit=crop&w=1200&q=85"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 7,
+      "category": "Accessory",
+      "name": "Studio Sticker Pack",
+      "variant": "Set of 8",
+      "description": "Kumpulan stiker vinyl untuk laptop, case, dan notebook.",
+      "price": 69000,
+      "unit": "pack",
+      "photoUrls": ["https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1557682260-96773eb01377?auto=format&fit=crop&w=1200&q=85"],
+      "stockOut": false,
+      "hide": false
+    },
+    {
+      "number": 8,
+      "category": "Vinyl",
+      "name": "Field Notes Vol. 01",
+      "variant": "180g cream vinyl",
+      "description": "Kompilasi ambient dan folk pilihan untuk sesi mendengarkan panjang.",
+      "price": 479000,
+      "unit": "pcs",
+      "photoUrls": ["https://images.unsplash.com/photo-1461360228754-6e81c478b882?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?auto=format&fit=crop&w=1200&q=85", "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=85"],
+      "stockOut": false,
+      "hide": false
+    }
+  ],
+  "theme": {
+    "light": {
+      "background": "#f5f5f5",
+      "surface": "#ffffff",
+      "text": "#121212",
+      "muted": "#6a6a6a",
+      "primary": "#159447"
+    },
+    "dark": {
+      "background": "#121212",
+      "surface": "#181818",
+      "text": "#ffffff",
+      "muted": "#b3b3b3",
+      "primary": "#1ed760"
+    }
+  }
+}

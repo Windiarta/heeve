@@ -82,6 +82,12 @@ export default function Example1({
             </button>
           </div>
           <div className="spotify-disc">
+            {(data.image || data.products[0]?.photoUrls[0]) && (
+              <img
+                src={data.image || data.products[0]?.photoUrls[0]}
+                alt={data.title || data.showcase.title}
+              />
+            )}
             <span>{data.showcase.badge}</span>
             <strong>{data.title || data.showcase.title}</strong>
           </div>
